@@ -6,6 +6,9 @@ import Box from '@/components/Box'
 Vue.use(Router)
 
 export default new Router({
+  hashbang: false,
+  history: true,
+  mode: 'history',
   routes: [
     {
       path: '/',

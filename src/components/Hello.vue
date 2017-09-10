@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
     <h2>Learn Swift 4 with Bob</h2>
     <h2>Bob the Developer</h2>
-    <a href="/#/box">Box</a>
+    <a href="/box">Box</a>
   </div>
 </template>
 
