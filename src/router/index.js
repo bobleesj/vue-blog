@@ -5,6 +5,7 @@ import About from '@/components/About'
 import Blog from '@/components/Blog'
 import Team from '@/components/Team'
 import Upload from '@/components/Upload'
+import Course from '@/components/Course'
 
 Vue.use(Router)
 
@@ -36,6 +37,11 @@ export default new Router({
       path: '/upload',
       name: 'Upload',
       component: Upload
+    },
+    {
+      path: '/course',
+      name: 'Course',
+      component: Course
     }
   ]
 })

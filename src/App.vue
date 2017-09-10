@@ -4,6 +4,10 @@
     </ul>
     <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
+    <router-link to="/team">Team</router-link>
+    <router-link to="/upload">Upload</router-link>
+    <router-link to="/blog">Blog</router-link>
+    <router-link to="/course">Course</router-link>
     <router-view></router-view>
   </div>
 </template>
