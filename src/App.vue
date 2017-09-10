@@ -1,12 +1,9 @@
 <template>
   <div id="app">
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/blog">Blog</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/team">Team</a></li>
-      <li><a href="/upload">Upload</a></li>
     </ul>
+    <router-link to="/">Home</router-link>
+    <router-link to="/about">About</router-link>
     <router-view></router-view>
   </div>
 </template>
