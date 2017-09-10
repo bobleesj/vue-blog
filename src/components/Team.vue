@@ -14,9 +14,9 @@
 <!--  Vue  -->
 <script>
 export default {
-  name: 'team',
   data () {
     return {
+      name: 'Team',
       members: [
         {
           name: 'Bob',
@@ -38,6 +38,14 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    updateImg: function () {
+      console.log('updateImg called')
+    }
+  },
+  created: function () {
+    this.name = 'Bob Lee'
   }
 }
 </script>
