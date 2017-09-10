@@ -2,14 +2,12 @@
 <template>
   <div class="upload">
     <h1>Upload</h1>
-    <p>Be able to upload markdown and good articles</p>
-    <textarea v-model="markdown" class="markdown" placeholder="Enter Markdown"></textarea>
-    <p>{{markdown}}</p>
-    <div v-html="renderedMarkdown">
-    </div>
+    <textarea v-model="markdown" class="markdown" placeholder="Preview"></textarea>
+    <div v-html="renderedMarkdown"></div>
+    <button v-on:click="counter += 1">Upload Blog</button>
+    <p>{{counter}}</p>
   </div>
 </template>
-
 
 <!--  Vue  -->
 <script>
@@ -18,9 +16,10 @@ var converter = new showdown.Converter()
 
 export default {
   name: 'upload',
-  data () {
+  data: function () {
     return {
-      markdown: 'Markdown'
+      markdown: '',
+      counter: 0
     }
   },
   computed: {
@@ -32,7 +31,6 @@ export default {
   }
 }
 </script>
-
 
 <!--  SCSS  -->
 <style lang="scss">
