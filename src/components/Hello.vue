@@ -2,10 +2,6 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Learn Swift 4 with Bob</h2>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
     <h2>Bob Lee</h2>
   </div>
 </template>
