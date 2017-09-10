@@ -4,8 +4,10 @@
     <h1>Upload</h1>
     <textarea v-model="markdown" class="markdown" placeholder="Preview"></textarea>
     <div v-html="renderedMarkdown"></div>
-    <button v-on:click="counter += 1">Upload Blog</button>
+    <button v-on:click="counter += 1">Increase Counter</button>
     <p>{{counter}}</p>
+    <button v-on:click="addNewTodo()">Upload Blog</button>
+    <p>{{posts}}</p>
   </div>
 </template>
 
@@ -19,7 +21,8 @@ export default {
   data: function () {
     return {
       markdown: '',
-      counter: 0
+      counter: 0,
+      posts: []
     }
   },
   computed: {
@@ -27,6 +30,14 @@ export default {
       var text = this.markdown
       var html = converter.makeHtml(text)
       return html
+    }
+  },
+  methods: {
+    addNewTodo: function () {
+      this.posts.push({
+        title: 'Title',
+        subtitle: 'Subtitle'
+      })
     }
   }
 }
