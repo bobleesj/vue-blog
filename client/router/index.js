@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/components/Home'
-import About from '@/components/About'
-import Blog from '@/components/Blog'
-import Team from '@/components/Team'
-import Upload from '@/components/Upload'
-import Course from '@/components/Course'
+import Home from '../components/Home'
+import About from '../components/About'
+import Blog from '../components/Blog'
+import Team from '../components/Team'
+import Upload from '../components/Upload'
+import Course from '../components/Course'
 
 Vue.use(Router)
 

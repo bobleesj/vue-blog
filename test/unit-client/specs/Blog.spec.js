@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Blog from '@/components/Blog'
+import Blog from '../../../client/components/Blog'
 
 describe('Blog.vue', () => {
   it('should render correct contents', () => {

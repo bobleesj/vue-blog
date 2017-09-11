@@ -8,12 +8,13 @@
     "dev": "node build/dev-server.js",
     "start": "node server.js",
     "build": "node build/build.js",
-    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js",
+    "unit": "cross-env BABEL_ENV=test karma start test/unit-client/karma.conf.js",
     "e2e": "node test/e2e/runner.js",
-    "test": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js  --single-run && npm run e2e",
-    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
+    "test": "cross-env BABEL_ENV=test karma start test/unit-client/karma.conf.js  --single-run && npm run e2e",
+    "lint": "eslint --ext .js,.vue src test/unit-client/specs test/e2e/specs"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "express": "^4.15.4",
     "showdown": "^1.7.4",
     "vue": "^2.4.2",
