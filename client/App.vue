@@ -6,6 +6,7 @@
     <router-link to="/upload">Upload</router-link>
     <router-link to="/blog">Blog</router-link>
     <router-link to="/course">Course</router-link>
+    <router-link to="/auth">Sign Up</router-link>
     <router-view></router-view>
   </div>
 </template>
