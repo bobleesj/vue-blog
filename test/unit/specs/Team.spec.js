@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Team from '@/components/Team'
+import Team from '../../../client/components/Team'
 
 describe('Team.vue', () => {
   const Constructor = Vue.extend(Team)

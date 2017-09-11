@@ -1,7 +1,7 @@
 <!--  Template  -->
 <template>
   <div class="team">
-    <h1>Team Bob the Developer</h1>
+    <h1>Team</h1>
     <div v-for="member in members">
       <div v-html="member.img" />
       <h2>{{ member.name }}</h2>
