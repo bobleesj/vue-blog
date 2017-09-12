@@ -5,7 +5,7 @@
         h1 Login
         h2 Join in 2 seconds
       .auth-login-form
-        form
+        form(action="/api/auth/login" method="POST")
           input(placeholder="Email" id="email")
           input(placeholder="Password" id="password")
           button Join

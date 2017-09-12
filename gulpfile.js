@@ -1,6 +1,12 @@
 var gulp = require('gulp');
 const mocha = require('gulp-mocha');
 var gutil = require('gulp-util');
+const jshint = require('gulp-jshint')
+
+gulp.task('lint', function () {
+  gulp.src('./server/**/*.js')
+    .pipe(jshint())
+})
 
 
 gulp.task('mocha', function() {
