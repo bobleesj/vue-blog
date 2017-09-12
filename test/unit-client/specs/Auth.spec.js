@@ -1,19 +1,23 @@
 import Vue from 'vue'
 import Auth from '../../../client/components/Auth'
 
-describe('Auth.vue', () => {
-  it('html form exists', () => {
-    const Constructor = Vue.extend(Auth)
-    const vm = new Constructor().$mount()
-    // Form
-    expect(vm.$el.querySelector('.auth form')).to.exist
-    expect(vm.$el.querySelector('.auth h1').textContent).to.equal('Login')
-    expect(vm.$el.querySelector('.auth h2').textContent).to.equal('Join in 2 seconds')
-    expect(vm.$el.querySelector('.auth #password').placeholder).to.equal('Password')
-    expect(vm.$el.querySelector('.auth #email').placeholder).to.equal('Email')
-    // Form divider for facebook underneath
-    expect(vm.$el.querySelector('.auth #left-divider')).to.exist
-    expect(vm.$el.querySelector('.auth #right-divider')).to.exist
-    expect(vm.$el.querySelector('.auth #divider-text').textContent).to.equal('OR')
+describe('Auth.vue HTML', () => {
+  const Constructor = Vue.extend(Auth)
+  const vm = new Constructor().$mount()
+  it('h1 and h2 header exists', () => {
+    expect(vm.$el.querySelector('.auth .auth-header h1').textContent).to.equal('Login')
+    expect(vm.$el.querySelector('.auth .auth-header h2').textContent).to.equal('Join in 2 seconds')
+  })
+  it('login form exists', () => {
+    expect(vm.$el.querySelector('.auth .auth-login-form form')).to.exist
+    expect(vm.$el.querySelector('.auth .auth-login-form form #email').placeholder).to.equal('Email')
+    expect(vm.$el.querySelector('.auth .auth-login-form form #password').placeholder).to.equal('Password')
+    expect(vm.$el.querySelector('.auth .auth-login-form form button').textContent).to.equal('Join')
+  })
+  it('form divider exists', () => {
+    expect(vm.$el.querySelector('.auth .auth-login-divider')).to.exist
+    expect(vm.$el.querySelector('.auth .auth-login-divider #left-divider')).to.exist
+    expect(vm.$el.querySelector('.auth .auth-login-divider #divider-text').textContent).to.equal('OR')
+    expect(vm.$el.querySelector('.auth .auth-login-divider #right-divider')).to.exist
   })
 })
