@@ -12,14 +12,14 @@ gulp.task('lint', function() {
 
 // Run test with mocha
 gulp.task('mocha', function() {
-  return gulp.src(['test/unit-server/specs/**.js'], { read: false })
+  return gulp.src(['test/unit-server/**/**.js'], { read: false })
   .pipe(mocha({ reporter: 'list' }))
   .on('error', gutil.log)
 })
 
 // Watch
 gulp.task('watch-test', function() {
-  gulp.watch(['test/unit-server/specs/**.js', 'server/**', 'app.js'], gulp.series('lint', 'mocha'))
+  gulp.watch(['test/unit-server/**/**.js', 'server/**/*.js', 'app.js'], gulp.series('lint', 'mocha'))
 })
 
 // Run

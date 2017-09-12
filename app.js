@@ -11,7 +11,7 @@ const cookieParser = require('cookie-parser')
 const auth = require('./server/routers/auth-router')
 const database = require('./server/database')
 
-// Create server instance
+// Create root instance
 app = express()
 
 // inject middlewares
@@ -24,7 +24,7 @@ app.use(morgan('dev'))
 app.use(cookieParser())
 
 // Inject API routers
-app.use('/auth', auth)
+app.use('/api/auth', auth)
 
 // Run
 const port = process.env.PORT || 5000
@@ -37,3 +37,6 @@ if (app.get('env') === 'development' ) {
 } else {
   database.connectDatabase("mongodb://localhost:27017")
 }
+
+
+module.exports = app
