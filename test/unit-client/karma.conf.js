@@ -14,6 +14,8 @@ module.exports = function (config) {
     browsers: ['Chrome'],
     frameworks: ['mocha', 'sinon-chai', 'phantomjs-shim'],
     reporters: ['spec', 'coverage'],
+    browserNoActivityTimeout: 100000,
+    browserDisconnectTolerance: 2,
     files: ['./index.js'],
     preprocessors: {
       './index.js': ['webpack', 'sourcemap']

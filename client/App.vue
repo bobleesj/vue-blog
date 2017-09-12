@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-    <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
-    <router-link to="/team">Team</router-link>
-    <router-link to="/upload">Upload</router-link>
-    <router-link to="/blog">Blog</router-link>
-    <router-link to="/course">Course</router-link>
-    <router-link to="/auth">Sign Up</router-link>
-    <router-view></router-view>
+    <nav>
+      <a><img src="./assets/logo.png"/></a>
+      <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>
+      <router-link to="/team">Team</router-link>
+      <router-link to="/upload">Upload</router-link>
+      <router-link to="/blog">Blog</router-link>
+      <router-link to="/course">Course</router-link>
+      <router-link to="/auth/login">Login</router-link>
+      <router-view></router-view>
+    </nav>
   </div>
 </template>
 
@@ -27,7 +30,16 @@ export default {
   margin-top: 60px;
 }
 
-ul {
-  list-style: none;
+
+nav {
+
+  a {
+    color: #333333;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+
 }
+
+
 </style>

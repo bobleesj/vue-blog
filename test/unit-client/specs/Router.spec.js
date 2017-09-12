@@ -10,6 +10,6 @@ describe('Router', () => {
     expect(routes[3].name).to.equal('Team')
     expect(routes[4].name).to.equal('Upload')
     expect(routes[5].name).to.equal('Course')
-    expect(routes[6].name).to.equal('Auth')
+    expect(routes[6].name).to.equal('Login')
   })
 })
