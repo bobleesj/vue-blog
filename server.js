@@ -14,7 +14,6 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/json'}));
 
-
 // Create API
 app.get('/api/auth/login', function (req, res) {
   res.send('Hello World from Bob!')
