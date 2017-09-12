@@ -1,22 +1,26 @@
-var gulp = require('gulp');
-const mocha = require('gulp-mocha');
-var gutil = require('gulp-util');
+const gulp = require('gulp')
+const mocha = require('gulp-mocha')
+const gutil = require('gulp-util')
 const jshint = require('gulp-jshint')
 
-gulp.task('lint', function () {
-  gulp.src('./server/**/*.js')
+// Beautify JS
+gulp.task('lint', function() {
+  return gulp.src(['app.js','server/**/*.js'])
     .pipe(jshint())
+    .pipe(jshint.reporter('default', { verbose: true }))
 })
 
-
+// Run test with mocha
 gulp.task('mocha', function() {
-  return gulp.src(['test/unit-server/**.js'], { read: false })
+  return gulp.src(['test/unit-server/specs/**.js'], { read: false })
   .pipe(mocha({ reporter: 'list' }))
-  .on('error', gutil.log);
-});
+  .on('error', gutil.log)
+})
 
+// Watch
 gulp.task('watch-test', function() {
-  gulp.watch(['test/unit-server/**.js', 'server/**', 'server.js'], gulp.series('mocha'));
-});
+  gulp.watch(['test/unit-server/specs/**.js', 'server/**', 'app.js'], gulp.series('lint', 'mocha'))
+})
 
-gulp.task('default', gulp.series('mocha', 'watch-test'))
+// Run
+gulp.task('default', gulp.series('lint', 'mocha', 'watch-test'))
