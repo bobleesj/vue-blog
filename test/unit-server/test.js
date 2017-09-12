@@ -1,8 +1,17 @@
-var assert = require('assert');
+var assert = require('assert')
+var chai = require('chai').expect
+var chaiHttp = require('chai-http')
+
+
 describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal(-1, [1,2,3].indexOf(4));
-    });
-  });
-});
+  it('should', function() {
+    //     chai.use(chaiHttp);
+    //     chai.request('http://localhost:8080')
+    //     .get('/')
+    //     .end(function(err, res) {
+    //       expect(res).to.have.status(404)    // <= Test completes before this runs
+    //     })
+    //   })
+    // })
+  })
+})
