@@ -3,16 +3,16 @@
 ## Website
  - https://bobthedeveloper.herokuapp.com/
 
-## Main Features
-
 ### Backend
- - Test Driven Development
- - MVC for the server
+ - Architecture:  MVC
 
 ### Front-end
-  - Vue.js
-  - One way statement management with Vuex
+  - Framework: Vue.js
+  - Architecture: One way data flow via Vuex
   - Token based authentication
+  - Single view component system
+
+### Overall
   - Test driven development
 
 ### Features to be implemented

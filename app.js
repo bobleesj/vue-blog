@@ -6,6 +6,8 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const cookieParser = require('cookie-parser')
+const history = require('connect-history-api-fallback');
+
 
 // Import routers
 const auth = require('./server/routers/auth-router')
@@ -22,16 +24,17 @@ app.use(bodyParser.text())
 app.use(bodyParser.json({ type: 'application/json'}))
 app.use(morgan('dev'))
 app.use(cookieParser())
+app.use(history())
 
 // Inject API routers
 app.use('/api/auth', auth)
 
-// Run
+// Run App
 const port = process.env.PORT || 5000
 app.listen(port)
 console.log('server started '+ port)
 
-// Change database based on mode
+// Connect database
 if (app.get('env') === 'development' ) {
   database.connectDatabase("mongodb://localhost:27017")
 } else {

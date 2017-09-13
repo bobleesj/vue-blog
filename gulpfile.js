@@ -6,13 +6,13 @@ const jshint = require('gulp-jshint')
 // Beautify JS
 gulp.task('lint', function() {
   return gulp.src(['app.js','server/**/*.js'])
-    .pipe(jshint())
-    .pipe(jshint.reporter('default', { verbose: true }))
+  .pipe(jshint())
+  .pipe(jshint.reporter('default', { verbose: true }))
 })
 
 // Run test with mocha
 gulp.task('mocha', function() {
-  return gulp.src(['test/unit-server/**/**.js'], { read: false })
+  return gulp.src(['test/unit-server/**/**.js', 'test/unit-server/*.js'], { read: false })
   .pipe(mocha({ reporter: 'list' }))
   .on('error', gutil.log)
 })
