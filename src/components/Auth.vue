@@ -6,8 +6,8 @@
       h2 Join in one second
     .auth-login-form
       form(action="/api/auth/login" method="post")
-        input(placeholder="Email" id="email" name="email")
-        input(placeholder="Password" id="password" name="password")
+        input(placeholder="Email" id="email" name="email" required)
+        input(placeholder="Password" id="password" name="password" required)
         button Join
     .auth-login-divider
       #left-divider
@@ -27,10 +27,10 @@
       h2 Join in 3 seconds
     .auth-login-form
       form(action="/api/auth/signup" method="post")
-        input(placeholder="First Name" id="firstname" name="firstName")
-        input(placeholder="Last Name" id="lastname" name="lastName")
-        input(placeholder="Username" id="username" name="username")
-        input(placeholder="Password" id="password" name="password")
+        input(placeholder="First Name" id="firstname" name="firstName" required)
+        input(placeholder="Last Name" id="lastname" name="lastName" required)
+        input(placeholder="Username" id="username" name="username" required)
+        input(placeholder="Password" id="password" name="password" required)
         button Sign Up
     .auth-login-divider
       #left-divider
