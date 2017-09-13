@@ -15,6 +15,7 @@ const database = require('./server/database')
 
 // Create root instance
 app = express()
+app.use(history())
 
 // inject middlewares
 app.use(serveStatic(__dirname + "/dist"))
@@ -24,7 +25,6 @@ app.use(bodyParser.text())
 app.use(bodyParser.json({ type: 'application/json'}))
 app.use(morgan('dev'))
 app.use(cookieParser())
-app.use(history())
 
 // Inject API routers
 app.use('/api/auth', auth)
