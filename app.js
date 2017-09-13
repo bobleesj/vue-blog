@@ -10,12 +10,6 @@ app.use(history())
 
 // inject middlewares
 app.use(serveStatic(__dirname + "/dist"))
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({extended: true}))
-app.use(bodyParser.text())
-app.use(bodyParser.json({ type: 'application/json'}))
-app.use(morgan('dev'))
-app.use(cookieParser())
 
 // Run App
 const port = process.env.PORT || 5000
