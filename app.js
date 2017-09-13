@@ -8,11 +8,6 @@ const morgan = require('morgan')
 const cookieParser = require('cookie-parser')
 const history = require('connect-history-api-fallback');
 
-
-// Import routers
-const auth = require('./server/routers/auth-router')
-const database = require('./server/database')
-
 // Create root instance
 app = express()
 app.use(history())
@@ -26,20 +21,9 @@ app.use(bodyParser.json({ type: 'application/json'}))
 app.use(morgan('dev'))
 app.use(cookieParser())
 
-// Inject API routers
-app.use('/api/auth', auth)
-
 // Run App
 const port = process.env.PORT || 5000
 app.listen(port)
 console.log('server started '+ port)
-
-// Connect database
-if (app.get('env') === 'development' ) {
-  database.connectDatabase("mongodb://localhost:27017")
-} else {
-  database.connectDatabase("mongodb://localhost:27017")
-}
-
 
 module.exports = app
