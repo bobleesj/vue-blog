@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Upload from '../../../client/components/Upload'
+import Upload from '../../../src/components/Upload'
 
 describe('Upload.vue', () => {
   it('should render correct contents', () => {

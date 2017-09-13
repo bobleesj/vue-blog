@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Auth from '../../../client/components/Auth'
+import Auth from '../../../src/components/Auth'
 
 describe('Auth.vue', () => {
   const Constructor = Vue.extend(Auth)

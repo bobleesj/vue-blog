@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import Course from '../../../client/components/Course'
+import Course from '../../../src/components/Course'
 describe('Course.vue', () => {
   it('should render correct contents', () => {
     const Constructor = Vue.extend(Course)

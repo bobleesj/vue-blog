@@ -1,4 +1,4 @@
-import Router from '../../../client/router/index'
+import Router from '../../../src/router/index'
 
 describe('Router', () => {
   it('contains all the routes', () => {

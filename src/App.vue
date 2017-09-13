@@ -1,16 +1,20 @@
 <template>
   <div id="app">
     <nav>
-      <a><img src="./assets/logo.png"/></a>
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-      <router-link to="/team">Team</router-link>
-      <router-link to="/upload">Upload</router-link>
-      <router-link to="/blog">Blog</router-link>
-      <router-link to="/course">Course</router-link>
-      <router-link to="/auth/login">Login</router-link>
-      <router-view></router-view>
+      <div id="left-nav">
+        <a id="logo" href="/"><img src="./assets/logo.png"/></a>
+      </div>
+      <div id="right-nav">
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
+        <router-link to="/team">Team</router-link>
+        <router-link to="/upload">Upload</router-link>
+        <router-link to="/blog">Blog</router-link>
+        <router-link to="/course">Course</router-link>
+        <router-link to="/auth/login">Login</router-link>
+      </div>
     </nav>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -21,25 +25,46 @@ export default {
 </script>
 
 <style lang="scss">
+*{margin:0;padding:0;}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
-
 nav {
+  margin-top: 0;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.16), 0 1px 4px rgba(0,0,0,0.23);
+  z-index: 2;
+  width: 100%;
+  background-color: white;
 
-  a {
-    color: #333333;
-    text-decoration: none;
-    margin-left: 10px;
+  #logo {
+    img {
+      width: 120px;
+      margin: 14px 0 0 20px;
+    }
+  }
+
+  #right-nav {
+    margin-right: 15px;
+
+    a {
+      margin: 5px 15px;
+      color: #333333;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
   }
 
 }
-
-
 </style>
