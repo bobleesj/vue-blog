@@ -2,10 +2,6 @@
 const express = require('express')
 const path = require('path')
 const serveStatic = require('serve-static')
-const mongoose = require('mongoose')
-const bodyParser = require('body-parser')
-const morgan = require('morgan')
-const cookieParser = require('cookie-parser')
 const history = require('connect-history-api-fallback');
 
 // Create root instance
