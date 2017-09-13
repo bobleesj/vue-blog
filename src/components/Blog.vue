@@ -4,3 +4,6 @@
     h2 Bob the Developer
     h3 Learn Swift with Bob
 </template>
+
+<style lang="scss">
+</style>

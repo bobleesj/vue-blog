@@ -6,7 +6,7 @@ import Blog from '../components/Blog'
 import Team from '../components/Team'
 import Upload from '../components/Upload'
 import Course from '../components/Course'
-import Auth from '../components/Auth'
+import Login from '../components/Auth/LogIn'
 
 Vue.use(Router)
 
@@ -20,6 +20,6 @@ export default new Router({
     { path: '/team', name: 'Team', component: Team },
     { path: '/upload', name: 'Upload', component: Upload },
     { path: '/course', name: 'Course', component: Course },
-    { path: '/auth/login', name: 'Login', component: Auth }
+    { path: '/auth/login', name: 'Login', component: Login }
   ]
 })
