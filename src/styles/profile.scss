@@ -1,0 +1,26 @@
+@import './main.scss';
+@import './components/box.scss';
+@import './components/container.scss';
+
+.profile {
+  @include flex-container(row, center, center);
+  padding-top: 50px;
+  background-color: $color-background;
+
+  &-container {
+    @extend .bordered-box;
+    background-color: white;
+    width: 1000px;
+    height: 500px;
+
+    &-image {
+
+    }
+
+    &-info {
+
+    }
+
+  }
+
+}

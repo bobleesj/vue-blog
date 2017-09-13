@@ -99,8 +99,11 @@ $form-padding: 40px;
       font-size: $font-size-small;
 
       a {
-        text-decoration: none;
         font-weight: $font-weight-bold;
+      }
+
+      a:hover {
+        cursor:pointer;
       }
 
     }
@@ -116,6 +119,13 @@ $form-padding: 40px;
       span {
         margin: 0 auto;
         font-size: $font-size-extra-small;
+      }
+
+      .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s
+      }
+      .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+        opacity: 0
       }
 
     }

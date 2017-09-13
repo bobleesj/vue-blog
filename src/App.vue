@@ -11,7 +11,7 @@
         <router-link to="/upload">Upload</router-link>
         <router-link to="/blog">Blog</router-link>
         <router-link to="/course">Course</router-link>
-        <router-link to="/auth/login">Login</router-link>
+        <router-link to="/auth">Login</router-link>
       </div>
     </nav>
     <router-view></router-view>
