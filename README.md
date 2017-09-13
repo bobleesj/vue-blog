@@ -3,9 +3,6 @@
 ## Website
  - https://bobthedeveloper.herokuapp.com/
 
-### Backend
- - Architecture:  MVC
-
 ### Front-end
   - Framework: Vue.js
   - Architecture: One way data flow via Vuex
