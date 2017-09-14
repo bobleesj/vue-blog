@@ -1,0 +1,74 @@
+@import './main.scss';
+@import './components/box.scss';
+@import './components/container.scss';
+
+.team {
+  padding-top: 100px;
+  @include flex-container(column, center, center);
+
+  &-header {
+    @include flex-container(column, center, center);
+    margin: 40px 0 60px 0;
+
+    h1 {
+      font-size: 18px;
+    }
+
+    h2 {
+      font-size: 12px;
+      margin-top: 5px;
+      font-weight: $font-weight-medium;
+    }
+
+  }
+
+  &-member {
+    @include flex-container(column, center, center);
+    @extend .bordered-box;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 20px;
+
+    &-profile {
+
+      img {
+        width: 180px;
+        margin-top: 20px;
+      }
+
+    }
+
+    &-title {
+      @include flex-container(column, center, center);
+
+      h3 {
+        margin-top: 15px;
+        font-size: 32px;
+
+      }
+
+      h4 {
+        font-weight: $font-weight-medium;
+        margin-top: 3px;
+        font-size: 18px;
+      }
+
+    }
+
+    &-description {
+
+      p {
+        font-size: 14px;
+        line-height: 28px;
+        margin-top: 20px;
+      }
+
+      br {
+        line-height: 50px;
+      }
+
+    }
+
+  }
+
+}
