@@ -42,7 +42,7 @@
       @include flex-container(column, center, center);
 
       h3 {
-        margin-top: 15px;
+        margin-top: 5px;
         font-size: 32px;
 
       }
@@ -53,6 +53,17 @@
         font-size: 18px;
       }
 
+    }
+
+    &-social {
+      margin-top: 0px;
+
+      a {
+        img {
+          width: 25px;
+          margin: 5px;
+        }
+      }
     }
 
     &-description {

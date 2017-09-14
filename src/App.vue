@@ -27,7 +27,7 @@ export default {
 <style lang="scss">
 *{margin:0;padding:0;}
 body {
-  background-color: #F9F9F9;
+  background-color: #F8F8F8;
 }
 
 #app {

@@ -7,11 +7,14 @@
   .team-member(v-for="member in members")
      .team-member-profile
        img(:src="member.img")
+     .team-member-social
+       a(:href="member.twitter" id="twitter") #[img(src="../assets/icons/twitter-dark-logo.png")]
+       a(:href="member.linkedin" id="linkedin") #[img(src="../assets/icons/linkedin-dark-logo.png")]
+       a(:href="member.github" id="github") #[img(src="../assets/icons/github-dark-logo.png")]
      .team-member-title
        h3 {{ member.name }}
        h4 {{ member.role }}
-     .team-member-social
-       a(:src="member.twitter")
+
      .team-member-description
        p(v-html="member.description")
 </template>
