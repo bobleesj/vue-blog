@@ -15,7 +15,6 @@
           span Biography
           textarea(placeholder="Tell us more about your expertise and interest" name="biography")
           button Edit
-
 </template>
 
 <style lang="scss">
