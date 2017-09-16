@@ -39,7 +39,7 @@
 
   &-blog {
     margin: 25px;
-    
+
     &-header {
 
       span {
@@ -58,11 +58,10 @@
     } // home-blog-header
 
     &-post {
-      margin-bottom: 50px;
+      margin-bottom: 80px;
 
       &-content {
         width: 100%;
-        background-color: ghostwhite;
 
         #cover-photo {
           width: 100%;
@@ -124,6 +123,33 @@
         }
 
 
+      }
+
+    }
+
+  }
+
+  &-footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    height:45px;
+    width:100%;
+    background: white;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.16), 0 1px 4px rgba(0,0,0,0.23);
+    @include flex-container(row, center, center);
+
+    span {
+      font-size: 12px;
+
+      a {
+        font-weight: $font-weight-bold;
+        text-decoration: none;
+        color: #454545;
+      }
+
+      a:hover {
+        cursor: pointer;
       }
 
     }
