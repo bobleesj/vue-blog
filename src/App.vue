@@ -27,14 +27,14 @@ export default {
 <style lang="scss">
 *{margin:0;padding:0;}
 body {
-  background-color: #F8F8F8;
+  background-color: white;
 }
 
 #app {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", "Helvetica Neue";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: #454545;
 }
 
 nav {
@@ -61,7 +61,7 @@ nav {
 
     a {
       margin: 5px 15px;
-      color: #333333;
+      color: #454545;
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;

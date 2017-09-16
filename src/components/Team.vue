@@ -14,9 +14,10 @@
      .team-member-title
        h3 {{ member.name }}
        h4 {{ member.role }}
-
      .team-member-description
        p(v-html="member.description")
+  .team-footer
+    span Interested in joining Team Bob the Developer? #[a(href="https://team.bobthedeveloper.io" target="_blank") Learm More]
 </template>
 
 <!--  Vue  -->
