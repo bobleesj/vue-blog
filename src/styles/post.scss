@@ -158,11 +158,103 @@
   } // post-share
 
   &-comment {
-    background-color: tomato;
+    margin: 20px;
 
     &-input {
-      @include flex-container(row, flex-start, center);
+      @include flex-container(row, space-between, center);
+      margin-bottom: 20px;
+
+      &-profile {
+
+        #comment-profile {
+          width: 50px;
+        }
+
+      } // post-comment-input-profile
+
+      &-field {
+        margin: 0;
+        width: 100%;
+        margin-left: 10px;
+
+        textarea {
+          width: 100%;
+          resize: none;
+          margin: 0;
+          background-color: $color-text-background;
+          display:inline-block;
+          border: solid 1px $color-border-light;
+          min-height: 40px;
+          padding: 5px 0 0 10px;
+          box-sizing: border-box;
+          font-size: 14px;
+          line-height: 24px;
+          border-radius: 5px;
+        }
+
+        textarea:focus, input:focus{
+          outline: none;
+        }
+
+      } // post-comment-input-field
+
+    } // post-comment-input
+
+    &-container {
+
+      &-individual {
+        @include flex-container(row, flex-start, flex-start);
+        margin-bottom: 30px;
+
+        &-profile {
+          margin-top: 4px;
+
+          img {
+            width: 50px;
+          }
+
+        }
+
+        &-content {
+          margin-left: 10px;
+
+          &-message {
+
+            p {
+              font-size: 14px;
+              line-height: 24px;
+              margin-bottom: 3px;
+              margin-right: 10px;
+
+              #comment-name {
+                font-weight: $font-weight-bold;
+              }
+            }
+
+          }
+
+          &-information {
+
+            #like {
+              font-weight: $font-weight-bold;
+              font-size: 14px;
+              margin-right: 5px;
+            }
+
+            #date {
+              font-size: 14px;
+              color: #BCBCBC;
+            }
+
+          }
+
+        }
+
+      }
+
+
     }
+
 
   }
 
