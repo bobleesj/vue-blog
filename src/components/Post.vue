@@ -1,6 +1,6 @@
 <template lang="pug">
 .post
-  //- Post Header -// 
+  //- Post Header -//
   .post-header
     .post-header-profile
       img(src="../assets/bob-profile.png" )
@@ -54,6 +54,16 @@
 
   //- Comment - //
   .post-comment
+    .post-comment-input
+      .post-container-input-profile
+        img(src="../assets/placeholder-profile1.png")
+      .post-container-input-field
+        textarea(placeholder="Write a comment")
+    .post-comment-container
+      .post-comment-container-individual
+        .post-comment-container-individual-profile
+        .post-comment-container-individual-content
+          p Luna An Bob is such an amazing instructor. His Medium blog has been incredibly resourceful during my journey of iOS development, and I'm so thankful for his recent creation of this well structured, excellent Udemy course
 
 </template>
 

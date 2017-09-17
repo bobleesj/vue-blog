@@ -144,7 +144,7 @@
       img {
         margin: 8px;
       }
-      
+
       #twitter {
         height: 27px;
       }
@@ -157,6 +157,14 @@
 
   } // post-share
 
+  &-comment {
+    background-color: tomato;
+
+    &-input {
+      @include flex-container(row, flex-start, center);
+    }
+
+  }
 
 
 }
