@@ -52,16 +52,20 @@
       img(src="../assets/icons/facebook-clear-logo.png" id="facebook")
       img(src="../assets/icons/linkedin-clear-logo.png" id="linkedin")
 
+  .post-divider
   //- Comment - //
   .post-comment
+    .post-comment-header
+      span Responses
     .post-comment-input
       .post-comment-input-profile
         img(src="../assets/placeholder-profile1.png" id="comment-profile")
       .post-comment-input-field
         textarea(placeholder="Write a comment" )
+    .post-comment-button
+      button Publish
 
     .post-comment-container
-
       //- Individual Comment -//
       .post-comment-container-individual
         .post-comment-container-individual-profile
