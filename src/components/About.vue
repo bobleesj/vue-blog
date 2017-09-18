@@ -15,8 +15,9 @@
       h3(id="featured-text") As Featured In
     .about-featured-logos
       img(src="../assets/logos/realm-logo.png" id="realm")
-      img(src="../assets/logos/udemy-logo.png" id="udemy")
       img(src="../assets/logos/medium-logo.png" id="medium")
+      img(src="../assets/logos/sitepoint-logo.png" id="sitepoint")
+      img(src="../assets/logos/udemy-logo.png" id="udemy")
       img(src="../assets/logos/ios-goodies-logo.png" id="ios-goodies")
       img(src="../assets/logos/ios-dev-weekly-logo.png" id="ios-dev-weekly")
       img(src="../assets/logos/this-week-in-swift-logo.png" id="this-week-swift")
@@ -25,30 +26,32 @@
   .about-recommendation
     h3(id="recommendation-text") Recommendations
     h4(id="recommendation-subtext") What others have said about my work
-    .about-recommendation-individual(v-for="review in reviews")
-      .about-recommendation-individual-header
-        .about-recommendation-individual-header-profile
-          img(:src="review.img")
-        .about-recommendation-individual-header-description
-          span#name #[a(href="https://www.linkedin.com/in/flexmcpee/") {{ review.name }}]
-          span(v-html="review.title" id="title")
-      .about-recommendation-individual-content
-        p {{ review.message }}
+    .about-recommendation-container
+      .about-recommendation-container-individual(v-for="review in reviews")
+        .about-recommendation-container-individual-header
+          .about-recommendation-container-individual-header-profile
+            img(:src="review.img")
+          .about-recommendation-container-individual-header-description
+            span#name #[a(href="https://www.linkedin.com/in/flexmcpee/") {{ review.name }}]
+            span(v-html="review.title" id="title")
+        .about-recommendation-container-individual-content
+          p {{ review.message }}
 
 
   .about-speaking
     .about-speaking-header
       h3(id="speaking-text") Speaking
       h3(id="speaking-subtext")  Fond of sharing my experience
-    .about-speaking-individual(v-for="event in events")
-      .about-speaking-individual-logo
-        img(:src="`https://cdn.bobthedeveloper.io/assets/events/` + event.logo")
-      .about-speaking-individual-description
-        span(id="title") {{ event.name}}
-        span(id="subtitle") {{ event.title }}
-        span(id="date") {{ event.date }}
-      .about-speaking-individual-summary
-        p This workshop is designed for developers who are interested in learning iOS app development with Swift. Even if you do not have any prior iOS programming experience, you will learn how to create an iOS app and understand the Swift basics by the end of the workshop. We'll look at Swift fundamentals like properties, optionals, access-controls, functions, protocols, structs, generics, enumerations, functional programming and error handling. We'll use Swift Playgrounds to explore some of these aspects of the language including the latest
+    .about-speaking-container
+      .about-speaking-container-individual(v-for="event in events")
+        .about-speaking-container-individual-logo
+          img(:src="`https://cdn.bobthedeveloper.io/assets/events/` + event.logo")
+        .about-speaking-container-individual-description
+          span(id="title") {{ event.name}}
+          span(id="subtitle") {{ event.title }}
+          span(id="date") {{ event.date }}
+        .about-speaking-container-individual-summary
+          p This workshop is designed for developers who are interested in learning iOS app development with Swift. Even if you do not have any prior iOS programming experience, you will learn how to create an iOS app and understand the Swift basics by the end of the workshop. We'll look at Swift fundamentals like properties, optionals, access-controls, functions, protocols, structs, generics, enumerations, functional programming and error handling. We'll use Swift Playgrounds to explore some of these aspects of the language including the latest
 
   .about-footer
     span I can be reached at #[a(href="https://team.bobthedeveloper.io" target="_blank") bob@bobthedeveloper.io]
@@ -138,14 +141,14 @@ export default {
         {
           name: `Let'Swift 17`,
           description: `Born and raised in California. I moved up to Oregon in 2010 to study psychology and Spanish at the University of Oregon. While in college, I thought for sure I was going to be a therapist, but after taking multiple courses in psychology and hating most of them I knew something had to change`,
-          title: `Swift Beginner’s Workshop`,
-          date: `Sept 22th, 2017`,
+          title: `Serverless vs Server Side Swift`,
+          date: `Sept 23th, 2017`,
           logo: `lets-swift17.png`
         },
         {
           name: 'Swift Korea Meetup',
           description: `Born and raised in California. I moved up to Oregon in 2010 to study psychology and Spanish at the University of Oregon. While in college, I thought for sure I was going to be a therapist, but after taking multiple courses in psychology and hating most of them I knew something had to change`,
-          title: `Swift Beginner’s Workshop`,
+          title: `Minimize Mouse and Trackpad Usage`,
           date: `May 30th, 2017`,
           logo: `swift-korea.png`
         }
@@ -154,9 +157,6 @@ export default {
   }
 }
 </script>
-
-
-
 
 
 <style lang="scss">

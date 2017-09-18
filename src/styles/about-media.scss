@@ -1,3 +1,7 @@
+$font-size-about-header-large-text: 28px;
+$font-size-about-header-large-subtext: 18px;
+$margin-about-header-large-text-bottom: 100px;
+
 @mixin about-media {
   .about {
 
@@ -23,9 +27,8 @@
         }
 
         p {
-          font-size: 14px;
-          line-height: 30px;
-
+          font-size: 15px;
+          line-height: 32px;
         }
 
 
@@ -38,8 +41,154 @@
 
 
     &-featured {
+      padding: 200px 0;
+
+      &-header {
+
+        #featured-text {
+          font-size:$font-size-about-header-large-text;
+        }
+
+      }
+
+      &-logos {
+        padding: 0 20px;
+
+        img {
+          margin: 20px;
+          height: 45px;
+        }
+
+        #realm {
+          height: 42px;
+
+        }
+
+        #sitepoint {
+          height: 36px;
+        }
+
+        #udemy {
+          height: 32px;
+        }
+
+        #medium {
+          height: 42px;
+        }
+
+      }
 
     }
+
+
+
+    &-recommendation {
+      #recommendation-text {
+        font-size:$font-size-about-header-large-text;
+
+      }
+
+      #recommendation-subtext {
+        font-size:$font-size-about-header-large-subtext;
+
+      }
+
+      &-container {
+        @include flex-container(row, center, flex-start);
+        flex-wrap: wrap;
+        padding: 0 20px;
+
+        &-individual {
+          max-width: 300px;
+          margin: 15px;
+        }
+
+      }
+
+    }
+
+
+
+    &-speaking {
+
+      &-header {
+        padding-bottom: 50px;
+      }
+
+      &-container {
+        padding-bottom: 50px;
+
+        &-individual {
+          margin: 0 auto;
+          max-width: 700px;
+          margin-top: 50px;
+          &-logo {
+            margin-bottom: 50px;
+
+            img {
+              height: 70px;
+            }
+
+            #swift-korea {
+              height: 40px;
+            }
+
+          }
+
+          &-description {
+
+            #title {
+              font-size: 26px;
+              margin-bottom: 10px;
+            }
+
+            #subtitle {
+              font-size: 22px;
+            }
+
+            #date {
+              font-size: 18px;
+            }
+
+          }
+
+          &-summary {
+
+            p {
+              font-size: 16px;
+              line-height: 38px;
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+
+
+
+    &-footer {
+
+      span {
+        font-size: 14px;
+
+        a {
+
+        }
+
+        a:hover {
+          cursor: pointer;
+        }
+
+      }
+
+    }
+
+
+
 
   }
 

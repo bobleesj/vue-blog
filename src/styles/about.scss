@@ -73,11 +73,13 @@ $margin-about-header-text-bottom: 15px;
       img {
         -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
         filter: grayscale(100%);
-        height: 27px;
         margin: 10px;
+        height: 35px;
       }
 
       #realm {
+        height: 32px;
+
       }
 
       #udemy {
@@ -85,8 +87,13 @@ $margin-about-header-text-bottom: 15px;
       }
 
       #medium {
-        height: 31px;
+        height: 34px;
       }
+
+      #sitepoint {
+        height: 28px;
+      }
+
 
     }
 
@@ -110,67 +117,72 @@ $margin-about-header-text-bottom: 15px;
       font-size: $font-size-about-header-subtext;
     }
 
-    &-individual {
-      background-color: white;
-      margin: 30px 26px 0px 26px;
-      padding: 25px;
-      border: 1px solid $color-border-light;
+    &-container {
+      &-individual {
+        background-color: white;
+        margin: 30px 26px 0px 26px;
+        padding: 25px;
+        border: 1px solid $color-border-light;
 
-      &-header {
-        @include flex-container(row, flex-start, center);
-        margin-bottom: 10px;
+        &-header {
+          @include flex-container(row, flex-start, center);
+          margin-bottom: 10px;
 
-        &-profile {
+          &-profile {
 
-          img {
-            width: 40px;
-            border-radius: 50%;
-            margin-right: 10px;
-          }
-
-        }
-
-        &-description {
-          font-size: 13px;
-          @include flex-container(column, flex-start, flex-start);
-
-          #name {
-            margin-top: 2px;
-            a {
-              text-decoration: none;
-              font-weight: $font-weight-bold;
-              color: #454545;
+            img {
+              width: 40px;
+              border-radius: 50%;
+              margin-right: 10px;
             }
 
           }
 
-          #title {
-            font-size: 12px;
-            margin-top: 2px;
-            line-height: 15px;
+          &-description {
+            font-size: 13px;
+            @include flex-container(column, flex-start, flex-start);
 
-            a {
-              text-decoration: none;
-              font-weight: $font-weight-bold;
-              color: #454545;
+            #name {
+              margin-top: 2px;
+              a {
+                text-decoration: none;
+                font-weight: $font-weight-bold;
+                color: #454545;
+              }
+
+            }
+
+            #title {
+              font-size: 12px;
+              margin-top: 2px;
+              line-height: 15px;
+
+              a {
+                text-decoration: none;
+                font-weight: $font-weight-bold;
+                color: #454545;
+              }
+
             }
 
           }
 
         }
 
-      }
+        &-content {
 
-      &-content {
+          p {
+            font-size: 13px;
+            line-height: 25px;
+          }
 
-        p {
-          font-size: 13px;
-          line-height: 25px;
         }
 
       }
 
     }
+
+
 
   }
 
@@ -197,57 +209,60 @@ $margin-about-header-text-bottom: 15px;
 
     }
 
-    &-individual {
-      background-color: white;
-      margin: 10px;
-      padding: 50px 40px;
-      border: 1px solid $color-border-light;
+    &-container {
 
-      &-logo {
-        height: 50px;
+      &-individual {
+        background-color: white;
+        margin: 10px;
+        padding: 50px 40px;
+        border: 1px solid $color-border-light;
 
-        img {
+        &-logo {
           height: 50px;
+
+          img {
+            height: 50px;
+          }
+
+          #swift-korea {
+            height: 40px;
+          }
+
         }
 
-        #swift-korea {
-          height: 40px;
+        &-description {
+          @include flex-container(column, flex-start, flex-start);
+          margin-top: 10px;
+          margin-bottom: 20px;
+
+          #title {
+            font-size: 22px;
+            margin-bottom: 5px;
+            font-weight: $font-weight-bold;
+          }
+
+          #subtitle {
+            font-size: 18px;
+            margin-bottom: 10px;
+          }
+
+          #date {
+            font-size: 16px;
+            color: #787878;
+          }
+
+        }
+
+        &-summary {
+
+          p {
+            font-size: 14px;
+            line-height: 30px;
+          }
+
         }
 
       }
-
-      &-description {
-        @include flex-container(column, flex-start, flex-start);
-        margin-top: 10px;
-        margin-bottom: 20px;
-
-        #title {
-          font-size: 22px;
-          margin-bottom: 5px;
-          font-weight: $font-weight-bold;
-        }
-
-        #subtitle {
-          font-size: 18px;
-          margin-bottom: 10px;
-        }
-
-        #date {
-          font-size: 16px;
-          color: #787878;
-        }
-
-      }
-
-      &-summary {
-
-        p {
-          font-size: 14px;
-          line-height: 30px;
-        }
-
-      }
-
 
     }
 
