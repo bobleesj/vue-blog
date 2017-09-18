@@ -3,8 +3,12 @@
 @import './components/button';
 @import './components/container';
 
+$font-size-about-header-text: 24px;
+$font-size-about-header-subtext: 16px;
+$margin-about-header-text-bottom: 15px;
+
 .about {
-  padding-top: 50px;
+  padding: 50px 0;
 
   &-introduction {
     margin-top: 150px;
@@ -52,7 +56,7 @@
     &-header {
 
       #featured-text {
-        font-size: 24px;
+        font-size: $font-size-about-header-text;
         margin-bottom: 40px;
       }
 
@@ -97,18 +101,18 @@
 
     #recommendation-text {
       text-align: center;
-      font-size: 24px;
-      margin-bottom: 15px;
+      font-size: $font-size-about-header-text;
+      margin-bottom: $margin-about-header-text-bottom;
     }
 
     #recommendation-subtext {
       text-align: center;
-      font-size: 16px;
+      font-size: $font-size-about-header-subtext;
     }
 
     &-individual {
       background-color: white;
-      margin: 30px 26px 13px 26px;
+      margin: 30px 26px 0px 26px;
       padding: 25px;
       border: 1px solid $color-border-light;
 
@@ -159,6 +163,85 @@
         }
 
       }
+
+    }
+
+  }
+
+
+
+
+  &-speaking {
+    background-color: $color-background;
+
+    &-header {
+      padding-top: 100px;
+      padding-bottom: 30px;
+
+      #speaking-text {
+        font-size: $font-size-about-header-text;
+        margin-bottom: $margin-about-header-text-bottom;
+        text-align: center;
+      }
+
+      #speaking-subtext {
+        font-size: $font-size-about-header-subtext;
+        text-align: center;
+      }
+
+    }
+
+    &-individual {
+      background-color: white;
+      margin: 10px;
+      padding: 50px 40px;
+      border: 1px solid $color-border-light;
+
+      &-logo {
+        height: 50px;
+
+        img {
+          height: 50px;
+        }
+
+        #swift-korea {
+          height: 40px;
+        }
+
+      }
+
+      &-description {
+        @include flex-container(column, flex-start, flex-start);
+        margin-top: 10px;
+        margin-bottom: 20px;
+
+        #title {
+          font-size: 22px;
+          margin-bottom: 5px;
+          font-weight: $font-weight-bold;
+        }
+
+        #subtitle {
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+
+        #date {
+          font-size: 16px;
+          color: #787878;
+        }
+
+      }
+
+      &-summary {
+
+        p {
+          font-size: 14px;
+          line-height: 30px;
+        }
+
+      }
+
 
     }
 

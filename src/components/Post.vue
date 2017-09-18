@@ -3,7 +3,7 @@
   //- Post Header -//
   .post-header
     .post-header-profile
-      img(src="../assets/bob-profile.png" )
+      img(src="../assets/bob-profile-min.png" )
     .post-header-author
       .post-header-author-name
         span(id="author-name") Bob Lee
