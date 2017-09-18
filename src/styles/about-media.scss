@@ -1,0 +1,46 @@
+@mixin about-media {
+  .about {
+
+    &-introduction {
+
+      &-profile {
+        margin-top: 200px;
+
+        img {
+          width: 230px;
+        }
+
+      }
+
+      &-bio {
+        max-width: 600px;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 20px;
+
+        h1 {
+
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 30px;
+
+        }
+
+
+      }
+
+    }
+
+
+
+
+
+    &-featured {
+
+    }
+
+  }
+
+}

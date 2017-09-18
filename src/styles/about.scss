@@ -2,6 +2,7 @@
 @import './components/box.scss';
 @import './components/button';
 @import './components/container';
+@import './about-media';
 
 $font-size-about-header-text: 24px;
 $font-size-about-header-subtext: 16px;
@@ -17,7 +18,6 @@ $margin-about-header-text-bottom: 15px;
     &-profile {
       @include flex-container(column, center, center);
       border-bottom: 1px solid #F8F8F8;
-      padding-bottom: 30px;
 
 
       img {
@@ -38,8 +38,8 @@ $margin-about-header-text-bottom: 15px;
       }
 
       p {
-        font-size: 14px;
-        line-height: 30px;
+        font-size: 12px;
+        line-height: 25px;
         margin-bottom: 20px;
       }
 
@@ -181,7 +181,7 @@ $margin-about-header-text-bottom: 15px;
     background-color: $color-background;
 
     &-header {
-      padding-top: 100px;
+      padding-top: 200px;
       padding-bottom: 30px;
 
       #speaking-text {
@@ -283,4 +283,10 @@ $margin-about-header-text-bottom: 15px;
 
   }
 
+}
+
+
+
+@media screen and (min-width: 720px) {
+  @include about-media;
 }
