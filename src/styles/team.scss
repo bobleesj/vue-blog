@@ -94,6 +94,7 @@
 
   // Team Footer
   &-footer {
+    @include flex-container(row, center, center);
     position:fixed;
     left:0px;
     bottom:0px;
@@ -101,7 +102,6 @@
     width:100%;
     background: white;
     box-shadow: 0 -2px 4px rgba(0,0,0,0.16), 0 1px 4px rgba(0,0,0,0.23);
-    @include flex-container(row, center, center);
 
     span {
       font-size: 12px;

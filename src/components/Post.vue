@@ -98,8 +98,6 @@
           .post-comment-container-individual-content-information
             span(id="like") Like
             span(id="date") • July 24 at 3:53pm
-
-
 </template>
 
 <style lang="scss">

@@ -123,31 +123,28 @@ $margin-about-header-large-text-bottom: 100px;
           max-width: 700px;
           margin-top: 50px;
           &-logo {
-            margin-bottom: 50px;
+            margin-bottom: 30px;
 
             img {
-              height: 70px;
+              height: 60px;
             }
 
-            #swift-korea {
-              height: 40px;
-            }
 
           }
 
           &-description {
 
             #title {
-              font-size: 26px;
+              font-size: 22px;
               margin-bottom: 10px;
             }
 
             #subtitle {
-              font-size: 22px;
+              font-size: 18px;
             }
 
             #date {
-              font-size: 18px;
+              font-size: 16px;
             }
 
           }

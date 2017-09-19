@@ -25,6 +25,11 @@ export default {
 
 <style lang="scss">
 *{margin:0;padding:0;}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   background-color: white;
 }

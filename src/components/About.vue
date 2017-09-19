@@ -54,7 +54,7 @@
           p This workshop is designed for developers who are interested in learning iOS app development with Swift. Even if you do not have any prior iOS programming experience, you will learn how to create an iOS app and understand the Swift basics by the end of the workshop. We'll look at Swift fundamentals like properties, optionals, access-controls, functions, protocols, structs, generics, enumerations, functional programming and error handling. We'll use Swift Playgrounds to explore some of these aspects of the language including the latest
 
   .about-footer
-    span I can be reached at #[a(href="https://team.bobthedeveloper.io" target="_blank") bob@bobthedeveloper.io]
+    span For speaking and any queries, I can be easily contacted at #[a(href="https://team.bobthedeveloper.io" target="_blank") bob@bobthedeveloper.io]
 
 
 </template>
@@ -68,7 +68,7 @@ export default {
         {
           name: `Alex McPherson`,
           title: `iOS Developer Manager <a href="https://github.com/my-mo">my-mo</a>`,
-          message: `I have been building apps for iOS for about 6-7 years with my first language being Objective-C. I never felt I've mastered the language with the release of Swift. In the past, I found many resources online some were alright and some were terrible turning us into code monkeys without any understanding what was seen. With the help of Bob's intermediate to advnaced Swift course, I have been able to grasp the language way better than I could without his help. His awesome teaching style, approachability and the way Bob uses real world analogies to get a subject across are magnificent. I wouldn’t hesitate to recommend Bob's course to anyone who wishes to learn the language of Swift because that exactly what you will do.`,
+          message: `I have been building apps for iOS for about 6-7 years with my first language being Objective-C. I never felt I've mastered the language with the release of Swift. In the past, I found many resources online some were alright and some were terrible turning us into code monkeys without any understanding what was seen. With the help of Bob's intermediate to advanced Swift course, I have been able to grasp the language way better than I could without his help. His awesome teaching style, approachability and the way Bob uses real world analogies to get a subject across are magnificent. I wouldn’t hesitate to recommend Bob's course to anyone who wishes to learn the language of Swift because that exactly what you will do.`,
           website: `https://www.linkedin.com/in/flexmcpee/`,
           img: `https://cdn.bobthedeveloper.io/assets/reviews/alex-min.png`
         },
