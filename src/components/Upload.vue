@@ -1,14 +1,17 @@
 <!--  Template  -->
-<template>
-  <div class="upload">
-    <h1>Upload</h1>
-    <textarea v-model="markdown" class="markdown" placeholder="Preview"></textarea>
-    <div v-html="renderedMarkdown"></div>
-    <button v-on:click="counter += 1">Increase Counter</button>
-    <p>{{counter}}</p>
-    <button v-on:click="addNewTodo()">Upload Blog</button>
-    <p>{{posts}}</p>
-  </div>
+<template lang="pug">
+.upload
+  .upload-markdown
+    .upload-markdown-container
+      .upload-markdown-container-header
+        span(id="header") Markdown
+        span(id="upload") Upload
+      .upload-markdown-container-body
+        textarea(v-model="markdown" class="markdown" placeholder="Enter Markdown")
+      .upload-markdown-container-footer
+        span For the formatting and writing tips, please follow this #[a(href="https://team.bobthedeveloper.io") guide]
+  .upload-preview
+    .upload-preview-container(v-html="renderedMarkdown")
 </template>
 
 <!--  Vue  -->
@@ -20,7 +23,7 @@ export default {
   name: 'upload',
   data: function () {
     return {
-      markdown: '',
+      markdown: ``,
       counter: 0,
       posts: []
     }
@@ -45,9 +48,5 @@ export default {
 
 <!--  SCSS  -->
 <style lang="scss">
-.markdown {
-  width: 80%;
-  height: 200px;
-  font-size: 18px;
-}
+@import '../styles/upload'
 </style>
