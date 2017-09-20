@@ -150,11 +150,11 @@
       }
 
       #twitter {
-        height: 23px;
+        height: 27px;
       }
 
       #facebook, #linkedin {
-        height: 25px;
+        height: 30px;
       }
 
     } // post-share-icon
@@ -297,10 +297,4 @@
   }
 
 
-}
-
-
-
-@media screen and (min-width: 720px) {
-  @include post-media;
 }
