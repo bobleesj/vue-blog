@@ -9,7 +9,7 @@ $font-size-about-header-subtext: 16px;
 $margin-about-header-text-bottom: 15px;
 
 .about {
-  padding: 50px 0;
+  padding: 50px 0 45px 0;
 
   &-introduction {
     margin-top: 150px;
@@ -212,7 +212,7 @@ $margin-about-header-text-bottom: 15px;
 
       &-individual {
         background-color: white;
-        margin: 10px;
+        margin: 10px 10px 0 10px;
         padding: 50px 40px;
         border: 1px solid $color-border-light;
 
@@ -269,6 +269,25 @@ $margin-about-header-text-bottom: 15px;
 
 
 
+  &-profile {
+    background-color: $color-background;
+    padding-top: 40px;
+
+    &-container {
+      @include flex-container(row, flex-end, center);
+      width: 100%;
+
+      img {
+        width: 50%;
+        margin-right: 10px;
+      }
+
+    }
+
+  }
+
+
+
 
   &-footer {
     position:fixed;
@@ -279,7 +298,7 @@ $margin-about-header-text-bottom: 15px;
     background: white;
     box-shadow: 0 -2px 4px rgba(0,0,0,0.16), 0 1px 4px rgba(0,0,0,0.23);
     @include flex-container(row, center, center);
-
+    text-align: center;
     span {
       font-size: 12px;
 

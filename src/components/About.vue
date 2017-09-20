@@ -52,9 +52,13 @@
           span(id="date") {{ event.date }}
         .about-speaking-container-individual-summary
           p This workshop is designed for developers who are interested in learning iOS app development with Swift. Even if you do not have any prior iOS programming experience, you will learn how to create an iOS app and understand the Swift basics by the end of the workshop. We'll look at Swift fundamentals like properties, optionals, access-controls, functions, protocols, structs, generics, enumerations, functional programming and error handling. We'll use Swift Playgrounds to explore some of these aspects of the language including the latest
+  .about-profile
+    .about-profile-container
+      img(src="https://cdn.bobthedeveloper.io/assets/bob/bob-conference-min.png")
 
   .about-footer
-    span For speaking and any queries, I can be easily contacted at #[a(href="https://team.bobthedeveloper.io" target="_blank") bob@bobthedeveloper.io]
+    span I can be easily contacted at #[a(href="https://team.bobthedeveloper.io" target="_blank") bob@bobthedeveloper.io]
+
 
 
 </template>

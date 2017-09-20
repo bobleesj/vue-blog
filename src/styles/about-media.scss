@@ -96,10 +96,10 @@ $margin-about-header-large-text-bottom: 100px;
       &-container {
         @include flex-container(row, center, flex-start);
         flex-wrap: wrap;
-        padding: 0 20px;
+        padding: 0 40px;
 
         &-individual {
-          max-width: 300px;
+          max-width: 260px;
           margin: 15px;
         }
 
@@ -120,7 +120,7 @@ $margin-about-header-large-text-bottom: 100px;
 
         &-individual {
           margin: 0 auto;
-          max-width: 700px;
+          max-width: 600px;
           margin-top: 50px;
           &-logo {
             margin-bottom: 30px;
@@ -152,8 +152,8 @@ $margin-about-header-large-text-bottom: 100px;
           &-summary {
 
             p {
-              font-size: 16px;
-              line-height: 38px;
+              font-size: 14px;
+              line-height: 32px;
             }
 
           }
@@ -163,6 +163,27 @@ $margin-about-header-large-text-bottom: 100px;
       }
 
     }
+
+    &-profile {
+
+      &-container {
+        max-width: 1500px;
+        margin: 0 auto;
+
+        img {
+          margin-right: 5%;
+          max-width: 350px;
+
+        }
+
+      }
+
+    }
+
+
+
+
+
 
 
 
@@ -183,9 +204,6 @@ $margin-about-header-large-text-bottom: 100px;
       }
 
     }
-
-
-
 
   }
 
