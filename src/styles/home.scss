@@ -72,6 +72,14 @@
         &-info {
           width: 100%;
 
+          a:hover {
+
+            img {
+              opacity: 0.8;
+            }
+
+          }
+
           #cover-photo {
             width: 100%;
           }

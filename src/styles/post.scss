@@ -2,6 +2,7 @@
 @import './components/box.scss';
 @import './components/button';
 @import './components/container';
+@import './post-media';
 
 
 .post {
@@ -149,11 +150,11 @@
       }
 
       #twitter {
-        height: 27px;
+        height: 23px;
       }
 
       #facebook, #linkedin {
-        height: 30px;
+        height: 25px;
       }
 
     } // post-share-icon
@@ -296,4 +297,10 @@
   }
 
 
+}
+
+
+
+@media screen and (min-width: 720px) {
+  @include post-media;
 }
