@@ -298,3 +298,9 @@
 
 
 }
+
+
+
+@media screen and (min-width: 720px) {
+  @include post-media;
+}

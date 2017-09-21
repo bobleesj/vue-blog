@@ -9,7 +9,6 @@
         <router-link to="/about">About</router-link>
         <router-link to="/team">Team</router-link>
         <router-link to="/upload">Upload</router-link>
-        <router-link to="/course">Course</router-link>
         <router-link to="/auth">Login</router-link>
       </div>
     </nav>
@@ -69,6 +68,10 @@ nav {
       text-decoration: none;
       font-size: 14px;
       font-weight: 500;
+    }
+
+    a:hover {
+      color: black;
     }
 
   }

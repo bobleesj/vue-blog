@@ -72,7 +72,7 @@
           img(src="../assets/placeholder-profile1.png")
         .post-comment-container-individual-content
           .post-comment-container-individual-content-message
-            p #[span(id="comment-name") Luna An] Bob is such an amazing instructor. His Medium blog has been incredibly resourceful during my journey of iOS development, and I'm so thankful for his recent creation of this well structured, excellent Udemy course
+            p #[span(id="comment-name") Ale] I have completed Bob's intermediate to Advanced Swift course. As the course title states, you really learn Swift with Bob.
           .post-comment-container-individual-content-information
             span(id="like") Like
             span(id="date") • July 24 at 3:53pm
@@ -83,18 +83,7 @@
           img(src="../assets/placeholder-profile1.png")
         .post-comment-container-individual-content
           .post-comment-container-individual-content-message
-            p #[span(id="comment-name") Luna An] Bob is such an amazing instructor. His Medium blog has been incredibly resourceful during my journey of iOS development, and I'm so thankful for his recent creation of this well structured, excellent Udemy course
-          .post-comment-container-individual-content-information
-            span(id="like") Like
-            span(id="date") • July 24 at 3:53pm
-
-      //- Individual Comment -//
-      .post-comment-container-individual
-        .post-comment-container-individual-profile
-          img(src="../assets/placeholder-profile1.png")
-        .post-comment-container-individual-content
-          .post-comment-container-individual-content-message
-            p #[span(id="comment-name") Luna An] Bob is such an amazing instructor. His Medium blog has been incredibly resourceful during my journey of iOS development, and I'm so thankful for his recent creation of this well structured, excellent Udemy course
+            p #[span(id="comment-name") Ale] I have completed Bob's intermediate to Advanced Swift course. As the course title states, you really learn Swift with Bob.
           .post-comment-container-individual-content-information
             span(id="like") Like
             span(id="date") • July 24 at 3:53pm

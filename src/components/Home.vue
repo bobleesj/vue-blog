@@ -22,7 +22,8 @@
             li(v-for="tag in post.tags") {{ tag }}
         .home-blog-container-individual-translation
           .home-blog-container-individual-translation-language(v-for="translator in post.translators")
-            img(:src="translator.profile")
+            a(href="www.facebook.com")
+              img(:src="translator.profile"  v-on:mouseover="mouseOver")
             span {{translator.langauge}}
   .home-footer
     span Interested in contributing? #[a(href="https://team.bobthedeveloper.io" target="_blank") Learm More]
@@ -289,6 +290,11 @@ export default {
           thumbnail: `https://cdn.bobthedeveloper.io/assets/placeholders/small-thumbnail-placeholder.png`
         }
       ]
+    }
+  },
+  methods: {
+    mouseOver: function () {
+      console.log(this.$el)
     }
   }
 }

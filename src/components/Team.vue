@@ -30,32 +30,21 @@ export default {
         {
           name: 'Raphael 🇺🇸',
           role: 'Content Distributor in Spanish',
-          description: `Born and raised in California. I moved up to Oregon in 2010 to study psychology and Spanish at the University of Oregon. While in college, I thought for sure I was going to be a therapist, but after taking multiple courses in psychology and hating most of them I knew something had to change. <br />
-          On a whim one day, I decided to try and make an iOS game not knowing anything about development. I quickly learned how in over my head I was, but what kept me going was my immediate love for Swift and coding itself. I love the strain of working through challenging problems and the elation of finally breaking through. I love helping people become better programmers, and that is what led me to Bob. Working with Bob has allowed me to help people change their work, their lives, and even the world all through doing what I love <br /> My desire is to see more people coding in Swift and making great apps. If you have any interest in making iOS applications you are in the right place. Check out our articles, watch some free tutorials on our YoutTube channel, and, please, download the intermediate course with Bob if you want to go to the next level. All of these resources are here to help you become the best developer you can be, and, of course, you can always contact Bob or me. We are here to see you succeed. Now let’s get coding!`,
+          description: `Born and raised in California. I moved up to Oregon in 2010 to study psychology and Spanish at the University of Oregon. While in college, I thought for sure I was going to be a therapist, but after taking multiple courses in psychology and hating most of them I knew something had to change. <br /> My desire is to see more people coding in Swift and making great apps. If you have any interest in making iOS applications you are in the right place. Check out our articles, watch some free tutorials on our YoutTube channel, and, please, download the intermediate course with Bob if you want to go to the next level. All of these resources are here to help you become the best developer you can be, and, of course, you can always contact Bob or me. We are here to see you succeed. Now let’s get coding!`,
           twitter: 'https://www.twitter.com/bobleesj',
           linkedin: 'https://www.linkedin.com/bobthedev',
           github: 'https://www.github.com/bobthedev',
-          img: `https://www.bobthedeveloper.io/img/profiles/team/raphael-profile.png`
+          img: `https://cdn.bobthedeveloper.io/assets/team/raphael.png`
         },
         {
-          name: 'Bobby',
+          name: 'Ale 🇦🇷',
           role: 'Content Distributor in Spanish',
-          description: `Born and raised in California. I moved up to Oregon in 2010 to study psychology and Spanish at the University of Oregon. While in college, I thought for sure I was going to be a therapist, but after taking multiple courses in psychology and hating most of them I knew something had to change. <br />
-          On a whim one day, I decided to try and make an iOS game not knowing anything about development. I quickly learned how in over my head I was, but what kept me going was my immediate love for Swift and coding itself. I love the strain of working through challenging problems and the elation of finally breaking through. I love helping people become better programmers, and that is what led me to Bob. Working with Bob has allowed me to help people change their work, their lives, and even the world all through doing what I love`,
-          twitter: 'https://www.twitter.com/bobleesj',
-          linkedin: 'https://www.linkedin.com/bobthedev',
-          github: 'https://www.github.com/bobthedev',
-          img: `https://www.bobthedeveloper.io/img/profiles/team/raphael-profile.png`
-        },
-        {
-          name: 'Banana',
-          role: 'Content Distributor in Spanish',
-          description: `Born and raised in California. I moved up to Oregon in 2010 to study psychology and Spanish at the University of Oregon. While in college, I thought for sure I was going to be a therapist, but after taking multiple courses in psychology and hating most of them I knew something had to change. <br />
-          On a whim one day, I decided to try and make an iOS game not knowing anything about development. I quickly learned how in over my head I was, but what kept me going was my immediate love for Swift and coding itself. I love the strain of working through challenging problems and the elation of finally breaking through. I love helping people become better programmers, and that is what led me to Bob. Working with Bob has allowed me to help people change their work, their lives, and even the world all through doing what I love`,
-          twitter: 'https://www.twitter.com/bobleesj',
-          linkedin: 'https://www.linkedin.com/bobthedev',
-          github: 'https://www.github.com/bobthedev',
-          img: `https://www.bobthedeveloper.io/img/profiles/team/raphael-profile.png`
+          description: "Alejandro has over 15 years of experience with coding in general (mostly web, backend and mobile platforms). He's been an Apple head for almost all his life, since the first Macintosh. He has a true passion on code (always trying to get better), and to help the community, giving back the help and awesomeness that they also gift to him. He has also taught Spanish as a foreign language, but he also enjoys learning and working with code (from open source projects, tutorials and articles). It does not settle with one language, and because of this I know about Swift, PHP, Ruby, Python and JavaScript, among others. On his free time, he likes to read sci-fi novels, watch a huge amount of tv shows or just relax and listen to music.",
+          twitter: 'https://twitter.com/alemohamad',
+          linkedin: 'https://www.linkedin.com/in/alemohamad/',
+          github: 'https://github.com/alemohamad',
+          website: `hello@alemohamad.com`,
+          img: `https://cdn.bobthedeveloper.io/assets/team/ale.png`
         }
       ]
     }

@@ -39,6 +39,11 @@
       background-color: $color-facebook;
     }
 
+    button:hover {
+      background-color: #7247F8;
+      cursor: pointer;
+    }
+
   }
 
 
@@ -94,6 +99,7 @@
           #subtitle {
             font-size: 20px;
             margin-top: 6px;
+            line-height: 28px;
             font-weight: $font-weight-medium;
             color: #838383;
             margin-top: 10px;
