@@ -5,7 +5,7 @@
       h1 Login
       h2 Join in one second
     .auth-login-form
-      form(action="/api/auth/login" method="post")
+      form(action="http://localhost:8000/signup" method="post")
         input(placeholder="Email" id="email" name="email" required)
         input(placeholder="Password" id="password" name="password" required)
         button Join
@@ -26,29 +26,28 @@
       h1 Sign Up
       h2 Join in 3 seconds
     .auth-login-form
-      form(action="/api/auth/signup" method="post")
-        input(placeholder="First Name" id="firstname" name="firstName" required)
-        input(placeholder="Last Name" id="lastname" name="lastName" required)
-        input(placeholder="Username" id="username" name="username" required)
-        input(placeholder="Password" id="password" name="password" required)
-        button Sign Up
+      input(placeholder="First Name" id="firstname" name="firstName" ref="firstName" required)
+      input(placeholder="Last Name" id="lastname" name="lastName" ref="lastName" required)
+      input(placeholder="Email" id="email" name="email" ref="email" required)
+      input(placeholder="Password" id="password" name="password" ref="password" required)
+      button(v-on:click="signup") Sign Up
     .auth-login-divider
       #left-divider
       span(id="divider-text") OR
       #right-divider
     .auth-login-facebook
-      button Join in one second
+      button(@click="signup") Join in one second
   .auth-signup
-    span Already have an account? #[a(v-on:click="greet") Login]
+    span Already have an account? #[a(@click="greet") Login]
   .auth-footer
     .auth-footer-copyright
       span Copyright © Bob Lee. All rights reserved.
-
-
 </template>
 
 <script>
-module.exports = {
+import firebase from 'firebase'
+
+export default {
   data: function () {
     return {
       isLoginPage: true
@@ -57,6 +56,25 @@ module.exports = {
   methods: {
     greet: function (event) {
       this.isLoginPage = !this.isLoginPage
+    },
+    signup: function (event) {
+      console.log('Sign up button pressed')
+      let firstName = this.$refs.firstName.value
+      let lastName = this.$refs.lastName.value
+      let password = this.$refs.password.value
+      let email = this.$refs.email.value
+
+      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+        var errorCode = error.code
+        var errorMessage = error.message
+      })
+
+      firebase.database().ref('users/' + firstName).set({
+        firstName: firstName,
+        lastName: lastName,
+        password: password,
+        email: email
+      })
     }
   }
 }
