@@ -64,10 +64,15 @@ export default {
       let password = this.$refs.password.value
       let email = this.$refs.email.value
 
-      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-        var errorCode = error.code
-        var errorMessage = error.message
-      })
+      firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then(function () {
+          // Handle sucessful creation of user
+          // You can get current user using firebase.auth().currentUser
+          console.log('User successfully created')
+        }).catch(function (error) {
+          // Handle failure of creation of user
+          console.log(error)
+        })
 
       firebase.database().ref('users/' + firstName).set({
         firstName: firstName,

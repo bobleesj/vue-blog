@@ -12,19 +12,19 @@ Vue.config.productionTip = false
 Vue.use(VueFire)
 
 /* eslint-disable no-new */
-
 new Vue({
   router,
   created () {
     firebase.initializeApp(config)
-    // firebase.auth().onAuthStateChanged((user) => {
-    //   if (user) {
-    //     console.log(user)
-    //     this.$router.push('/about')
-    //   } else {
-    //     this.$router.push('/auth')
-    //   }
-    // })
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.$router.push('/')
+        console.log('User already logged in')
+      } else {
+        this.$router.push('/auth')
+        console.log('Need to login first')
+      }
+    })
   },
   template: '<App/>',
   el: '#app',
