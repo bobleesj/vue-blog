@@ -11,7 +11,11 @@
         <router-link to="/auth">Login</router-link>
       </div>
       <!--  Open button-->
-      <span style="font-size:30px;cursor:pointer" class="openbtn">&#9776;</span>
+      <div class="hamburger">
+        <div id="first"></div>
+        <div id="second"></div>
+        <div id="third"></div>
+      </div>
       <!--  Logo  -->
       <div class="logo-container">
         <a id="logo" href="/"><img src="./assets/logo.png"/></a>
@@ -31,7 +35,7 @@
     },
     methods: {
       pressedBody: function (event) {
-        if (event.target.className === 'openbtn') {
+        if (event.target.className === 'hamburger') {
           this.$refs.sideNav.style.width = `180px`
         } else {
           this.$refs.sideNav.style.width = `0px`
