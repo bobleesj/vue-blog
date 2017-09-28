@@ -10,7 +10,7 @@
           <router-link to="/">Home</router-link>
           <router-link to="/about">About</router-link>
           <router-link to="/team">Team</router-link>
-          <router-link to="/user">Profile</router-link>
+          <router-link to="/user">User</router-link>
         </div>
         <div v-else>
           <!--  The user is not logged in -->
@@ -40,7 +40,7 @@
           <router-link to="/about">About</router-link>
           <router-link to="/team">Team</router-link>
           <router-link to="/upload">Upload</router-link>
-          <router-link to="/user">Profile</router-link>
+          <router-link to="/user">User</router-link>
         </div>
         <div v-else>
           <!--  The user is not logged in -->
@@ -50,11 +50,8 @@
           <router-link to="/upload">Upload</router-link>
           <router-link to="/auth">Login</router-link>
         </div>
-
       </div>
     </nav>
-
-
 
 
     <router-view></router-view>
