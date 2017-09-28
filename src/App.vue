@@ -46,7 +46,7 @@ export default {
       this.$refs.sideNav.style.width = `250px`
     },
     closeNav: function (event) {
-      this.$refs.sideNav.style.width = `0px`
+      this.$refs.sideNav.style.width = `0px`A
     }
   }
 }
