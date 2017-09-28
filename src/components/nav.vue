@@ -44,32 +44,18 @@
  * prefixes.
  */
 
-body
-{
-  margin: 0;
-  padding: 0;
 
-  /* make it look decent enough */
-  background: #232323;
-  color: #cdcdcd;
-  font-family: "Avenir Next", "Avenir", sans-serif;
-}
-
-a
-{
+a {
   text-decoration: none;
   color: #232323;
-
   transition: color 0.3s ease;
 }
 
-a:hover
-{
+a:hover {
   color: tomato;
 }
 
-#menuToggle
-{
+#menuToggle {
   display: block;
   position: relative;
   top: 50px;
@@ -81,8 +67,7 @@ a:hover
   user-select: none;
 }
 
-#menuToggle input
-{
+#menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
@@ -101,8 +86,7 @@ a:hover
 /*
  * Just a quick hamburger
  */
-#menuToggle span
-{
+#menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
@@ -121,13 +105,11 @@ a:hover
               opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
@@ -135,8 +117,7 @@ a:hover
  * Transform all the slices of hamburger
  * into a crossmark.
  */
-#menuToggle input:checked ~ span
-{
+#menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
@@ -145,8 +126,7 @@ a:hover
 /*
  * But let's hide the middle one.
  */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
@@ -154,8 +134,7 @@ a:hover
 /*
  * Ohyeah and the last one should go the other direction
  */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+#menuToggle input:checked ~ span:nth-last-child(2) {
   opacity: 1;
   transform: rotate(-45deg) translate(0, -1px);
 }
@@ -164,8 +143,7 @@ a:hover
  * Make this absolute positioned
  * at the top left of the screen
  */
-#menu
-{
+#menu {
   position: absolute;
   width: 100px;
   margin: -100px 0 0 -50px;
@@ -183,8 +161,7 @@ a:hover
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-#menu li
-{
+#menu li {
   padding: 10px 0;
   font-size: 22px;
 }
@@ -192,8 +169,7 @@ a:hover
 /*
  * And let's fade it in from the left
  */
-#menuToggle input:checked ~ ul
-{
+#menuToggle input:checked ~ ul {
   transform: scale(1.0, 1.0);
   opacity: 1;
 }
