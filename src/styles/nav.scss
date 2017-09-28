@@ -1,6 +1,7 @@
 @import './main.scss';
 @import './components/box.scss';
 @import './components/container';
+@import './nav-media';
 
 nav {
   margin-top: 0;
@@ -86,9 +87,12 @@ nav {
     margin: 4px;
     background-color: #454545;
   }
+
+  #first:hover, #second:hover, #third:hover {
+    background-color: black;
+  }
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
+@media screen and (min-width: 720px) {
+  @include nav-media;
 }

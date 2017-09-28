@@ -5,9 +5,10 @@
       h1 Login
       h2 Join in one second
     .auth-login-form
-      input(placeholder="Email" id="email" name="email" required)
-      input(placeholder="Password" id="password" name="password" required)
-      button(v-on:click="signin") Join
+      form(action="http://localhost:5000/auth/signup" method="post")
+        input(placeholder="Email" id="email" name="email" required)
+        input(placeholder="Password" id="password" name="password" required)
+        input(type="submit" value="Join")
     .auth-login-divider
       #left-divider
       span(id="divider-text") OR
@@ -25,17 +26,18 @@
       h1 Sign Up
       h2 Join in 3 seconds
     .auth-login-form
-      input(placeholder="First Name" id="firstname" name="firstName" ref="firstName" required)
-      input(placeholder="Last Name" id="lastname" name="lastName" ref="lastName" required)
-      input(placeholder="Email" id="email" name="email" ref="email" required)
-      input(placeholder="Password" id="password" name="password" ref="password" required)
-      button(v-on:click="signup") Sign Up
+      form(action="http://localhost:5000/auth/signup" method="post")
+        input(placeholder="First Name" id="firstname" name="firstName" ref="firstName" required)
+        input(placeholder="Last Name" id="lastname" name="lastName" ref="lastName" required)
+        input(placeholder="Email" id="email" name="email" ref="email" required)
+        input(placeholder="Password" id="password" name="password" ref="password" required)
+        input(type="submit" value="Sign Up")
     .auth-login-divider
       #left-divider
       span(id="divider-text") OR
       #right-divider
     .auth-login-facebook
-      button(@click="signup") Join in one second
+      button Join in one second
   .auth-signup
     span Already have an account? #[a(@click="greet") Login]
   .auth-footer

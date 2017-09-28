@@ -6,9 +6,9 @@ import Team from '../components/Team'
 import Upload from '../components/Upload'
 import Course from '../components/Course'
 import Login from '../components/Auth'
-import Profile from '../components/Profile'
+import User from '../components/User'
 import Post from '../components/Post'
-import Nav from '../components/Nav'
+import PageNotFound from '../components/404'
 
 Vue.use(Router)
 
@@ -23,7 +23,7 @@ export default new Router({
     { path: '/upload', name: 'Upload', component: Upload },
     { path: '/course', name: 'Course', component: Course },
     { path: '/auth', name: 'Login', component: Login },
-    { path: '/profile', name: 'Profile', component: Profile },
-    { path: '/nav', name: 'Nav', component: Nav }
+    { path: '/user', name: 'User', component: User },
+    { path: `*`, component: PageNotFound }
   ]
 })

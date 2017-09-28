@@ -27,8 +27,6 @@
             span {{translator.langauge}}
   .home-footer
     span Interested in contributing? #[a(href="https://team.bobthedeveloper.io" target="_blank") Learm More]
-
-
 </template>
 
 <script scope>

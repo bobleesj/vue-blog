@@ -20,33 +20,35 @@
       <div class="logo-container">
         <a id="logo" href="/"><img src="./assets/logo.png"/></a>
       </div>
-      </nav>
-      <router-view></router-view>
-    </div>
-  </template>
+    </nav>
+    <router-view></router-view>
+  </div>
+</template>
 
-  <script>
-  export default {
-    name: 'app',
-    data: function () {
-      return {
-        isNavOpen: false
-      }
-    },
-    methods: {
-      pressedBody: function (event) {
-        if (event.target.className === 'hamburger') {
-          this.$refs.sideNav.style.width = `180px`
-        } else {
-          this.$refs.sideNav.style.width = `0px`
-        }
+<script>
+export default {
+  name: 'app',
+  data: function () {
+    return {
+      isNavOpen: false
+    }
+  },
+  methods: {
+    pressedBody: function (event) {
+      console.log(this.$cookie.get('token'))
+      console.log(event)
+      if (event.target.id === 'first' || event.target.id === 'second' || event.target.id === 'third' || event.target.className === 'hamburger') {
+        this.$refs.sideNav.style.width = `180px`
+      } else {
+        this.$refs.sideNav.style.width = `0px`
       }
     }
   }
-  </script>
+}
+</script>
 
-  <style lang="scss">
-  @import './styles/app';
-  @import './styles/nav';
+<style lang="scss">
+@import './styles/app';
+@import './styles/nav';
 
-  </style>
+</style>
