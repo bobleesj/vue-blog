@@ -5,17 +5,27 @@
       <a id="logo" href="/"><img src="./assets/logo.png"/></a>
     </div>
     <div id="right-nav"> -->
-    <div class="container" v-on:click="toggle" v-bind:class="{ change: isNavOpen }">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-    </div>
 
-    <router-link to="/">Home</router-link>
+
+    <!-- <router-link to="/">Home</router-link>
     <router-link to="/about">About</router-link>
     <router-link to="/team">Team</router-link>
     <router-link to="/upload">Upload</router-link>
-    <router-link to="/auth">Login</router-link>
+    <router-link to="/auth">Login</router-link> -->
+
+    <div id="mySidenav" class="sidenav" ref="sideNav">
+      <a href="javascript:void(0)" class="closebtn" v-on:click="closeNav">&times;</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Clients</a>
+      <a href="#">Contact</a>
+    </div>
+    <p>Click on the element below to open the side navigation menu.</p>
+<span style="font-size:30px;cursor:pointer" v-on:click="openNav">&#9776; open</span>
+
+
+
+
     <!-- </div> -->
   </nav>
   <router-view></router-view>
@@ -32,9 +42,11 @@ export default {
     }
   },
   methods: {
-    toggle: function (event) {
-      this.isNavOpen = true
-      console.log(this.isNavOpen)
+    openNav: function (event) {
+      this.$refs.sideNav.style.width = `250px`
+    },
+    closeNav: function (event) {
+      this.$refs.sideNav.style.width = `0px`
     }
   }
 }
