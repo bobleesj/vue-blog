@@ -79,4 +79,11 @@ nav {
   }
 
 }
+
+@media screen and (max-width: 720px) {
+  body {
+    background-color: tomato;
+  }
+}
+
 </style>

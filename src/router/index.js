@@ -8,6 +8,7 @@ import Course from '../components/Course'
 import Login from '../components/Auth'
 import Profile from '../components/Profile'
 import Post from '../components/Post'
+import Nav from '../components/Nav'
 
 Vue.use(Router)
 
@@ -22,6 +23,7 @@ export default new Router({
     { path: '/upload', name: 'Upload', component: Upload },
     { path: '/course', name: 'Course', component: Course },
     { path: '/auth', name: 'Login', component: Login },
-    { path: '/profile', name: 'Profile', component: Profile }
+    { path: '/profile', name: 'Profile', component: Profile },
+    { path: '/nav', name: 'Nav', component: Nav }
   ]
 })
