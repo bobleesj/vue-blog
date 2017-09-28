@@ -1,3 +1,7 @@
+@import './main.scss';
+@import './components/box.scss';
+@import './components/container';
+
 nav {
   margin-top: 0;
   position: fixed;
@@ -10,65 +14,62 @@ nav {
   width: 100%;
   background-color: white;
 
-  #logo {
-    img {
-      width: 120px;
-      margin: 14px 0 0 20px;
-    }
-  }
+  .logo-container {
+    @include flex-container(row, center, center);
+    width: 100%;
 
-  #right-nav {
-    margin-right: 15px;
+    #logo {
+      margin: 0;
 
-    a {
-      margin: 5px 15px;
-      color: #454545;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-    }
+      img {
+        width: 120px;
+        margin: 14px 0 0 0;
+        opacity: 0.8
+      }
 
-    a:hover {
-      color: black;
+      img:hover {
+        opacity: 1.0;
+      }
+
     }
 
   }
 
 }
 
-
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.3s;
-    padding-top: 60px;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.16), 0 1px 4px rgba(0,0,0,0.23);
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
+  padding: 17px 8px 8px 20px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #454545;
+  display: block;
+  transition: 0.3s;
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  position: absolute;
+  top: 0;
+  font-size: 15px;
+  width: 100%;
+  color: lightgrey;
 }
 
 @media screen and (max-height: 450px) {
