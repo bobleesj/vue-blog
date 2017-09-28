@@ -51,7 +51,7 @@
           span(id="subtitle") {{ event.title }}
           span(id="date") {{ event.date }}
         .about-speaking-container-individual-summary
-          p This workshop is designed for developers who are interested in learning iOS app development with Swift. Even if you do not have any prior iOS programming experience, you will learn how to create an iOS app and understand the Swift basics by the end of the workshop. We'll look at Swift fundamentals like properties, optionals, access-controls, functions, protocols, structs, generics, enumerations, functional programming and error handling. We'll use Swift Playgrounds to explore some of these aspects of the language including the latest
+          p {{ event.description }}
   .about-profile
     .about-profile-container
       img(src="https://cdn.bobthedeveloper.io/assets/bob/bob-conference-min.png")
@@ -136,25 +136,35 @@ export default {
       ],
       events: [
         {
+          name: `let us: Go!`,
+          description: `Talking about server-side Swift`,
+          title: `Test Driven Development in iOS`,
+          date: `Nov 3rd, 2017`,
+          logo: `let-us-go.png`
+        },
+        {
           name: 'try! Swift @Bangalor',
           description: `Born and raised in California. I moved up to Oregon in 2010 to study psychology and Spanish at the University of Oregon. While in college, I thought for sure I was going to be a therapist, but after taking multiple courses in psychology and hating most of them I knew something had to change`,
           title: `Swift Beginner’s Workshop`,
           date: `Nov 11th, 2017`,
-          logo: `try-swift.png`
+          logo: `try-swift.png`,
+          website: `https://www.tryswift.co/events/2017/bangalore/`
         },
         {
           name: `Let'Swift 17`,
           description: `Born and raised in California. I moved up to Oregon in 2010 to study psychology and Spanish at the University of Oregon. While in college, I thought for sure I was going to be a therapist, but after taking multiple courses in psychology and hating most of them I knew something had to change`,
           title: `Serverless vs Server Side Swift`,
           date: `Sept 23th, 2017`,
-          logo: `lets-swift17.png`
+          logo: `lets-swift17.png`,
+          website: `http://letswift.kr/2017/`
         },
         {
           name: 'Swift Korea Meetup',
           description: `Born and raised in California. I moved up to Oregon in 2010 to study psychology and Spanish at the University of Oregon. While in college, I thought for sure I was going to be a therapist, but after taking multiple courses in psychology and hating most of them I knew something had to change`,
           title: `Minimize Mouse and Trackpad Usage`,
           date: `May 30th, 2017`,
-          logo: `swift-korea.png`
+          logo: `swift-korea.png`,
+          website: `https://swiftkorea.github.io/meetup/`
         }
       ]
     }
