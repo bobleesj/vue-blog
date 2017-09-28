@@ -20,6 +20,14 @@
       <div class="logo-container">
         <a id="logo" href="/"><img src="./assets/logo.png"/></a>
       </div>
+      <div id="topNav" class="topNav" ref="topNav">
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
+        <router-link to="/team">Team</router-link>
+        <router-link to="/upload">Upload</router-link>
+        <router-link to="/auth">Login</router-link>
+      </div>
+
     </nav>
     <router-view></router-view>
   </div>
