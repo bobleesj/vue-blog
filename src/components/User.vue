@@ -2,21 +2,19 @@
   .profile
     .profile-container
       .profile-container-image
-        img(src="https://cdn-images-1.medium.com/fit/c/180/180/1*r88lN70oSYaFoSFxCe_pJg.png" @click="redirect")
+        img(src="https://cdn.bobthedeveloper.io/profiles/59cec9cc2b76de13fd275b7e.png" @click="redirect")
         form(method="post" encType="multipart/form-data" action="http://localhost:5000/user/profile")
           span Change Image
           input(type="file" name="profilePicture")
           input(type="submit" value="Upload Profile")
       .profile-container-info
-        form(method="post")
-          span User ID
-          input(:value="userId" readonly)
-          span Full Name
-          input(placeholder="Full Name" :value="name")
+        form(method="post" action="http://localhost:5000/user/edit")
+          span First Name
+          input(placeholder="First Name" name="firstName")
+          span Last Name
+          input(placeholder="Last Name" name="lastName")
           span Description
-          textarea(placeholder="Tell us more about your expertise and interest" name="biography")
-          span Token
-          input(:value="token")
+          textarea(placeholder="Tell us more about your expertise and interest" name="userBio")
           button Edit
         button(@click="logout") Log out
 </template>
@@ -27,7 +25,8 @@ import axios from 'axios'
 export default {
   data: function () {
     return {
-      name: `Bob Lee`,
+      firstName: `Bob`,
+      lastName: `Lee`,
       userId: `12312312`,
       token: this.$cookie.get('token'),
       posts: [``]
