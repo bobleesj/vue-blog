@@ -3,7 +3,10 @@
     .profile-container
       .profile-container-image
         img(src="https://cdn-images-1.medium.com/fit/c/180/180/1*r88lN70oSYaFoSFxCe_pJg.png" @click="redirect")
-        span Change Image
+        form(method="post" encType="multipart/form-data" action="http://localhost:5000/user/profile")
+          span Change Image
+          input(type="file" name="profilePicture")
+          input(type="submit" value="Upload Profile")
       .profile-container-info
         form(method="post")
           span User ID
