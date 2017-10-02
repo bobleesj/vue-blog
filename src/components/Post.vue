@@ -89,6 +89,21 @@
             span(id="date") • July 24 at 3:53pm
 </template>
 
+<script>
+import axios from 'axios'
+
+export default {
+  async created () {
+    const response = await axios.get(`http://localhost:5000/blog/posts`)
+    this.posts = response.data
+  },
+  data () {
+    return {
+      random: ''
+    }
+  }
+}
+</script>
 <style lang="scss">
 @import '../styles/post';
 </style>

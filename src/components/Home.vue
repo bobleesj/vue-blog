@@ -13,8 +13,8 @@
     .home-blog-container
       .home-blog-container-individual(v-for="post in posts")
         .home-blog-container-individual-info
-          a(href="/post/")
-            img(:src="post.thumbnail" id="cover-photo")
+          a(:href="'/post/' + post._id")
+            img(src="https://cdn.bobthedeveloper.io/posts/5991934931ca9b1c7733572b/intro-to-error-handling-in-swift.png" id="cover-photo")
           h3(id="title") {{ post.title }}
           h4(id="subtitle") {{ post.subtitle }}
         .home-blog-container-individual-tags
