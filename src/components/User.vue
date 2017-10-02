@@ -2,7 +2,7 @@
   .profile
     .profile-container
       .profile-container-image
-        img(src="https://cdn.bobthedeveloper.io/profiles/59cec9cc2b76de13fd275b7e.png" @click="redirect")
+        img(:src="profileImage" @click="redirect")
         form(method="post" encType="multipart/form-data" action="http://localhost:5000/user/profile")
           span Change Image
           input(type="file" name="profilePicture")
@@ -10,11 +10,11 @@
       .profile-container-info
         form(method="post" action="http://localhost:5000/user/edit")
           span First Name
-          input(placeholder="First Name" name="firstName")
+          input(:value="firstName" placeholder="First Name" name="firstName")
           span Last Name
-          input(placeholder="Last Name" name="lastName")
+          input(:value="lastName" placeholder="Last Name" name="lastName")
           span Description
-          textarea(placeholder="Tell us more about your expertise and interest" name="userBio")
+          textarea(:value="description" placeholder="Tell us more about your expertise and interest" name="userBio")
           button Edit
         button(@click="logout") Log out
 </template>
@@ -25,18 +25,24 @@ import axios from 'axios'
 export default {
   data: function () {
     return {
-      firstName: `Bob`,
-      lastName: `Lee`,
-      userId: `12312312`,
-      token: this.$cookie.get('token'),
-      posts: [``]
+      firstName: ``,
+      lastName: ``,
+      description: ``,
+      profileImage: ``
     }
   },
   async created () {
-    console.log(this.$cookie.get('token'))
+    console.log(this.token)
     try {
-      const response = await axios.get(`http://localhost:5000/blog/posts`)
-      this.posts.push(response)
+      const user = await axios(`http://localhost:5000/user`, {
+        method: `get`,
+        withCredentials: true
+      })
+      console.log(user)
+      this.firstName = user.data.firstName
+      this.lastName = user.data.lastName
+      this.description = user.data.description
+      this.profileImage = `https://cdn.bobthedeveloper.io/profiles/` + user.data._id + `.png`
     } catch (err) {
       console.log(err)
     }
@@ -49,6 +55,8 @@ export default {
       this.$cookie.delete('token')
       window.location.reload()
       this.$router.push(`/`)
+    },
+    getUserInfo: async function () {
     }
   }
 }
