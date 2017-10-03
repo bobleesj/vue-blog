@@ -23,10 +23,17 @@ const actions = {
     context.commit('appendPost')
   }
 }
+
+const getters = {
+  doneTodos: state => {
+    return 'realBro'
+  }
+}
 // create the Vuex instance by combining the state and mutations objects
 // then export the Vuex store for use by our components
 export default new Vuex.Store({
-  state,
+  actions,
+  getters,
   mutations,
-  actions
+  state
 })

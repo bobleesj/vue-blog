@@ -51,6 +51,7 @@ export default {
       // this.$store.commit('appendPost')
       this.$store.dispatch('getPost')
       console.log(this.$store.state.currentPost)
+      console.log(this.$store.getters.doneTodos)
     }
   }
 }
