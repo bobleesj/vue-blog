@@ -20,11 +20,6 @@ export default {
     return {
       isModalPresent: false
     }
-  },
-  methods: {
-    // openModal: function (event) {
-    //   this.isModalPresent = !this.isModalPresent
-    // }
   }
 }
 

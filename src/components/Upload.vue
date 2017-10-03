@@ -1,6 +1,6 @@
 <!--  Template  -->
 <template lang="pug">
-.upload
+ .upload
   .upload-markdown
     .upload-markdown-container
       .upload-markdown-container-header
@@ -12,11 +12,13 @@
         span For the formatting and writing tips, please follow this #[a(href="https://team.bobthedeveloper.io") guide]
   .upload-preview
     .upload-preview-container(v-html="renderedMarkdown")
+  modal
 </template>
 
 <!--  Vue  -->
 <script>
 import showdown from 'Showdown'
+import Modal from './Modal'
 var converter = new showdown.Converter()
 
 export default {
@@ -42,6 +44,9 @@ export default {
         subtitle: 'Subtitle'
       })
     }
+  },
+  components: {
+    'modal': Modal
   }
 }
 </script>
