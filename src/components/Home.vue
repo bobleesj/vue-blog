@@ -48,7 +48,9 @@ export default {
       const postInfo = await axios.get(`http://localhost:5000/blog/post/` + postId)
       console.log(postInfo)
       this.$router.push({ path: 'post/' + postInfo.data.postUrl })
-      console.log(this.$store.state.count)
+      // this.$store.commit('appendPost')
+      this.$store.dispatch('getPost')
+      console.log(this.$store.state.currentPost)
     }
   }
 }

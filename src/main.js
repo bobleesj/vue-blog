@@ -12,11 +12,20 @@ Vue.config.productionTip = false
 
 const store = new Vuex.Store({
   state: {
-    count: 0
+    count: 0,
+    currentPost: ``
   },
   mutations: {
     increment: state => state.count++,
-    decrement: state => state.count--
+    decrement: state => state.count--,
+    appendPost: state => {
+      state.currentPost = '1231245343'
+    }
+  },
+  actions: {
+    getPost: context => {
+      context.commit('appendPost')
+    }
   }
 })
 
