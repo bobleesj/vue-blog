@@ -13,8 +13,8 @@
     .home-blog-container
       .home-blog-container-individual(v-for="post in posts")
         .home-blog-container-individual-info
-          a(:href="'/post/' + post._id")
-            img(src="https://cdn.bobthedeveloper.io/posts/5991934931ca9b1c7733572b/intro-to-error-handling-in-swift.png" id="cover-photo")
+          a(v-on:click="mouseOver" :alt="post._id" ref="post")
+            img(src="https://cdn.bobthedeveloper.io/posts/5991934931ca9b1c7733572b/intro-to-error-handling-in-swift.png" id="cover-photo" :alt="post._id")
           h3(id="title") {{ post.title }}
           h4(id="subtitle") {{ post.subtitle }}
         .home-blog-container-individual-tags
@@ -43,8 +43,11 @@ export default {
     }
   },
   methods: {
-    mouseOver: function () {
-      console.log(this.$el)
+    mouseOver: async function (event) {
+      const postId = event.target.alt
+      const postInfo = await axios.get(`http://localhost:5000/blog/post/` + postId)
+      console.log(postInfo)
+      this.$router.push({ path: 'post/' + postInfo.data.postUrl })
     }
   }
 }
