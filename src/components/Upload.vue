@@ -5,14 +5,14 @@
     .upload-markdown-container
       .upload-markdown-container-header
         span(id="header") Markdown
-        span(id="upload") Upload
+        span(id="upload" @click="isModalOpen = !isModalOpen") Upload
       .upload-markdown-container-body
         textarea(v-model="markdown" class="markdown" placeholder="Enter Markdown")
       .upload-markdown-container-footer
         span For the formatting and writing tips, please follow this #[a(href="https://team.bobthedeveloper.io") guide]
   .upload-preview
     .upload-preview-container(v-html="renderedMarkdown")
-  modal
+  modal(:isModalPresent="isModalOpen")
 </template>
 
 <!--  Vue  -->
@@ -27,8 +27,12 @@ export default {
     return {
       markdown: ``,
       counter: 0,
-      posts: []
+      posts: [],
+      isModalOpen: false
     }
+  },
+  components: {
+    'modal': Modal
   },
   computed: {
     renderedMarkdown: function () {
@@ -38,15 +42,9 @@ export default {
     }
   },
   methods: {
-    addNewTodo: function () {
-      this.posts.push({
-        title: 'Title',
-        subtitle: 'Subtitle'
-      })
+    upload: function () {
+      console.log('hello')
     }
-  },
-  components: {
-    'modal': Modal
   }
 }
 </script>

@@ -1,25 +1,30 @@
 <template lang="pug">
 .modal
-  button(v-on:click="isModalPresent = !isModalPresent") Open Modal
   transition(name="fade" mode="out-in")
     .modal-container(id="myModal" ref="modal" v-show="isModalPresent" key="3")
       .modal-container-content
         .modal-container-content-header
           span(class="close") &times;
-          h2 Modal Header
+          h2 Upload Task
+          hr
         .modal-container-content-body
-          p Some text in the Modal Body
-          p Some other text...
+          form(action="http://localhost:8080/blog/upload")
+          h3 Enter Tags
+          input(type="text" name="tags" placeholder="iOS, swift, rxswift")
+          h3 Category
+          input(type="text" name="category")
+          h3 Cover Photo
+          input(type="file" name="coverPhoto")
+          input(type="password" name="password" password)
+          input(type="submit")
         .modal-container-content-footer
           h3 Modal Footer
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-      isModalPresent: false
-    }
+  props: {
+    isModalPresent: false
   }
 }
 
