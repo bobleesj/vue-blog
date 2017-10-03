@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import Modal from '../components/Modal'
 import Home from '../components/Home'
 import About from '../components/About'
 import Team from '../components/Team'
@@ -24,6 +25,7 @@ export default new Router({
     { path: '/course', name: 'Course', component: Course },
     { path: '/auth', name: 'Login', component: Login },
     { path: '/user', name: 'User', component: User },
-    { path: `*`, component: PageNotFound }
+    { path: `*`, component: PageNotFound },
+    { path: '/modal', component: Modal }
   ]
 })

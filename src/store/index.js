@@ -3,6 +3,13 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+// Action
+const actions = {
+  getPost: context => {
+    context.commit('appendPost')
+  }
+}
+
 // the root, initial state object
 const state = {
   count: 0,
@@ -15,12 +22,6 @@ const mutations = {
   decrement: state => state.count--,
   appendPost: state => {
     state.currentPost = '1231245343'
-  }
-}
-
-const actions = {
-  getPost: context => {
-    context.commit('appendPost')
   }
 }
 
