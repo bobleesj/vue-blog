@@ -8,15 +8,15 @@
           h2 Upload Task
           hr
         .modal-container-content-body
-          form(action="http://localhost:8080/blog/upload")
-          h3 Enter Tags
-          input(type="text" name="tags" placeholder="iOS, swift, rxswift")
-          h3 Category
-          input(type="text" name="category")
-          h3 Cover Photo
-          input(type="file" name="coverPhoto")
-          input(type="password" name="password" password)
-          input(type="submit")
+          form(action="http://localhost:5000/post/upload" method="post" encType="multipart/form-data")
+            h3 Enter Tags
+            input(type="text" name="tags" placeholder="iOS, swift, rxswift")
+            h3 Category
+            input(type="text" name="category")
+            h3 Cover Photo
+            input(type="file" name="coverPhoto")
+            input(type="password" name="password" password)
+            input(type="submit")
         .modal-container-content-footer
           h3 Modal Footer
 </template>

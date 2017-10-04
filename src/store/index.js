@@ -13,7 +13,8 @@ const actions = {
 // the root, initial state object
 const state = {
   count: 0,
-  currentPost: ``
+  currentPost: ``,
+  postObject: ``
 }
 
 // define the possible mutations that can be applied to our state
@@ -22,6 +23,12 @@ const mutations = {
   decrement: state => state.count--,
   appendPost: state => {
     state.currentPost = '1231245343'
+  },
+  prepareForUpload: state => {
+    state.postObject = {
+      title: 'This is Bob',
+      subtitle: 'This is the subtitle bro'
+    }
   }
 }
 

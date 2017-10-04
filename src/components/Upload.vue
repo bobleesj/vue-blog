@@ -5,7 +5,7 @@
     .upload-markdown-container
       .upload-markdown-container-header
         span(id="header") Markdown
-        span(id="upload" @click="isModalOpen = !isModalOpen") Upload
+        span(id="upload" @click="clickUploadButton") Upload
       .upload-markdown-container-body
         textarea(v-model="markdown" class="markdown" placeholder="Enter Markdown")
       .upload-markdown-container-footer
@@ -23,14 +23,6 @@ var converter = new showdown.Converter()
 
 export default {
   name: 'upload',
-  data: function () {
-    return {
-      markdown: ``,
-      counter: 0,
-      posts: [],
-      isModalOpen: false
-    }
-  },
   components: {
     'modal': Modal
   },
@@ -41,9 +33,21 @@ export default {
       return html
     }
   },
+  created () {
+    this.$store.commit('prepareForUpload')
+  },
+  data: function () {
+    return {
+      markdown: ``,
+      counter: 0,
+      posts: [],
+      isModalOpen: false
+    }
+  },
   methods: {
-    upload: function () {
-      console.log('hello')
+    clickUploadButton: function () {
+      this.isModalOpen = !this.isModalOpen
+      console.log(this.$store.state.postObject.title)
     }
   }
 }

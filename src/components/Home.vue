@@ -34,7 +34,7 @@ import axios from 'axios'
 
 export default {
   async created () {
-    const response = await axios.get(`http://localhost:5000/blog/posts`)
+    const response = await axios.get(`http://localhost:5000/post/posts`)
     this.posts = response.data
   },
   data () {
@@ -44,13 +44,15 @@ export default {
   },
   methods: {
     mouseOver: async function (event) {
-      const postId = event.target.alt
-      const postInfo = await axios.get(`http://localhost:5000/blog/post/` + postId)
-      console.log(postInfo)
-      this.$router.push({ path: 'post/' + postInfo.data.postUrl })
+      // const postId = event.target.alt
+      // const postInfo = await axios.get(`http://localhost:5000/post/` + postId)
+      // console.log(postInfo)
+      // this.$router.push({ path: 'post/' + postInfo.data.postUrl })
       // this.$store.commit('appendPost')
+      this.$store.commit('prepareForUpload')
       this.$store.dispatch('getPost')
       console.log(this.$store.state.currentPost)
+      console.log(this.$store.state.postObject.title)
       console.log(this.$store.getters.doneTodos)
     }
   }
